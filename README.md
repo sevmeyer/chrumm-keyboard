@@ -33,7 +33,7 @@ Electronics
 -----------
 
 The [firmware] is maintained in a separate repository.
-The electronics are handwired. I mostly followed existing guides,
+The electronics are hand-wired. I mostly followed existing guides,
 see the [QMK Hand-Wiring Guide] for a good overview. In particular,
 I learned about the importance of the diodes from [Dave Dribin].
 I used the following materials, based on availability,
