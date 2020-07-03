@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="416" height="480" version="1.1" viewBox="0 0 416 480" xmlns="http://www.w3.org/2000/svg">
+	<rect width="416" height="480" style="fill:#fff"/>
+	<path d="m148 447v4a16 8 0 0 0 16 8 16 8 0 0 0 16 -8v-4z" style="fill:#8a929e"/>
+	<ellipse cx="164" cy="447" rx="16" ry="8" style="fill:#c3c7cb"/>
+	<path d="m156 436v10c0 2.209139 3.581722 4 8 4s8-1.790861 8-4v-10z" style="fill:#8a929e"/>
+	<ellipse cx="164" cy="436" rx="8" ry="4" style="fill:#c3c7cb"/>
+	<ellipse cx="164" cy="433" rx="8" ry="4" style="fill:#8a929e"/>
+	<ellipse cx="164" cy="430" rx="8" ry="4" style="fill:#c3c7cb"/>
+	<ellipse cx="164" cy="427" rx="8" ry="4" style="fill:#8a929e"/>
+	<ellipse cx="164" cy="424" rx="8" ry="4" style="fill:#c3c7cb"/>
+	<ellipse cx="164" cy="421" rx="8" ry="4" style="fill:#8a929e"/>
+	<ellipse cx="164" cy="418" rx="8" ry="4" style="fill:#c3c7cb"/>
+	<ellipse cx="164" cy="415" rx="8" ry="4" style="fill:#8a929e"/>
+	<ellipse cx="164" cy="413" rx="6" ry="3" style="fill:#c3c7cb"/>
+	<path d="m128 320-96 48v8l96 48 96-48v-8zm36 46a20 10 0 0 1 20 10 20 10 0 0 1 -20 10 20 10 0 0 1 -20 -10 20 10 0 0 1 20 -10z" style="fill:#b85"/>
+	<path d="m128 320-96 48 96 48 96-48zm36 38a20 10 0 0 1 20 10 20 10 0 0 1 -20 10 20 10 0 0 1 -20 -10 20 10 0 0 1 20 -10z" style="fill:#eca"/>
+	<path d="m128 288-96 48 96 48 96-48zm36 35a26 13 0 0 1 26 13 26 13 0 0 1 -26 13 26 13 0 0 1 -26 -13 26 13 0 0 1 26 -13z" style="fill:#39d;opacity:.3"/>
+	<path d="m128 248-96 48v8l96 48 96-48v-8zm36 50a12 6 0 0 1 12 6 12 6 0 0 1 -12 6 12 6 0 0 1 -12 -6 12 6 0 0 1 12 -6z" style="fill:#333"/>
+	<path d="m128 248-96 48 96 48 96-48zm36 42a12 6 0 0 1 12 6 12 6 0 0 1 -12 6 12 6 0 0 1 -12 -6 12 6 0 0 1 12 -6z" style="fill:#555"/>
+	<ellipse cx="164" cy="284" rx="16" ry="8" style="fill:#8a929e"/>
+	<ellipse cx="164" cy="278" rx="19" ry="9.5" style="fill:#c3c7cb"/>
+	<ellipse cx="164" cy="276" rx="16" ry="8" style="fill:#8a929e"/>
+	<ellipse cx="164" cy="270" rx="19" ry="9.5" style="fill:#c3c7cb"/>
+	<ellipse cx="164" cy="268" rx="16" ry="8" style="fill:#8a929e"/>
+	<ellipse cx="164" cy="264" rx="15" ry="7.5" style="fill:#c3c7cb"/>
+	<ellipse cx="164" cy="264" rx="9" ry="4.5" style="fill:#515b63"/>
+	<path d="m128 168-96 48v16l96 48 96-48v-16zm36 54a20 10 0 0 1 20 10h-40a20 10 0 0 1 20 -10z" style="fill:#b85"/>
+	<path d="m128 168-96 48 96 48 96-48zm36 38a20 10 0 0 1 20 10 20 10 0 0 1 -20 10 20 10 0 0 1 -20 -10 20 10 0 0 1 20 -10z" style="fill:#eca"/>
+	<path d="m128 136-96 48 96 48 96-48zm36 35a26 13 0 0 1 26 13 26 13 0 0 1 -26 13 26 13 0 0 1 -26 -13 26 13 0 0 1 26 -13z" style="fill:#39d;opacity:.3"/>
+	<path d="m224 152v-16l-96-48-96 48v16l96 48z" style="fill:#b85"/>
+	<path d="m224 136-96-48-96 48 96 48z" style="fill:#eca"/>
+	<path d="m224 104-96-48-96 48 96 48z" style="fill:#39d;opacity:.3"/>
+	<path d="m224 72v-8l-96-48-96 48v8l96 48z" style="fill:#333"/>
+	<path d="m224 64-96-48-96 48 96 48z" style="fill:#555"/>
+	<g style="font-family:'Source Code Pro', monospace;font-size:15px">
+		<text x="240" y="72">Switch plate</text>
+		<text x="240" y="108">Glue</text>
+		<text x="240" y="148">Cork layer</text>
+		<text x="240" y="188">...</text>
+		<text x="240" y="228">...</text>
+		<text x="240" y="268">Threaded insert</text>
+		<text x="240" y="304">Bottom plate</text>
+		<text x="240" y="340">Glue</text>
+		<text x="240" y="376">Cork dampener</text>
+		<text x="240" y="436">Screw</text>
+	</g>
+</svg>

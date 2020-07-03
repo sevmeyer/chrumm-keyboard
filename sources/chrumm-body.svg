@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="360mm" height="250mm" viewBox="0 0 360 250">
+	<sodipodi:namedview inkscape:document-units="mm">
+		<inkscape:grid empspacing="10" type="xygrid" units="mm" spacingx="1" spacingy="1"/>
+	</sodipodi:namedview>
+	<circle cx="319.265" cy="229.106" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="300.17" cy="177.984" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="285.23" cy="137.99" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="316.883" cy="37.54" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="201.352" cy="124.901" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="180" cy="183.5" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="158.649" cy="124.901" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="180" cy="31.386" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="53.667" cy="36.963" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="74.771" cy="137.99" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="59.83" cy="177.984" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="40.735" cy="229.106" r="2.5" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<path d="m34.589 114.694 23.385 15.297 35.208-16.058 48.453 17.68 22.085-103.911-108.664-14.112-3.216 15.135 10.515 3.439-2.687 12.647-10.004-1.031z" style="fill:none;stroke-width:1.5;stroke:#f00"/>
+	<path d="m89.927 139.567 53.671 46.432h20.402l3-15h26l3 15h20.402l53.671-46.432-5.931-15.879-54.445 19.867-18.698-13.081-2-73.41h-18l-2 73.41-18.698 13.081-54.445-19.867z" style="fill:none;stroke-width:1.5;stroke:#f00"/>
+	<path d="m342.094 103.78-12.827-60.353-18.382 1.96-2.688-12.646 18.56-5.927-3.321-15.626-127.155 16.514 22.084 103.91 48.453-17.68 35.208 16.058z" style="fill:none;stroke-width:1.5;stroke:#f00"/>
+	<path d="m25.623 118.388 115.591 75.612h77.573l132.272-86.524-22.328-105.044-142.078 18.453h-13.305l-123.588-16.051z" style="fill:none;stroke-width:3;stroke:#0f0"/>
+	<path d="m122.746 204.201-101.281-66.251-17.446 82.077l41.24 26.977z" style="fill:none;stroke-width:3;stroke:#0f0"/>
+	<path d="m237.254 204.201 77.486 42.802 41.24-26.977-17.446-82.077z" style="fill:none;stroke-width:3;stroke:#0f0"/>
+</svg>

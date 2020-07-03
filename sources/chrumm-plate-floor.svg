@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="360mm" height="250mm" viewBox="0 0 360 250">
+	<sodipodi:namedview inkscape:document-units="mm">
+		<inkscape:grid empspacing="10" type="xygrid" units="mm" spacingx="1" spacingy="1"/>
+	</sodipodi:namedview>
+	<circle cx="319.265" cy="229.106" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="300.17" cy="177.984" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="285.23" cy="137.99" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="316.883" cy="37.54" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="201.352" cy="124.901" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="180" cy="183.5" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="158.649" cy="124.901" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="180" cy="31.386" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="53.667" cy="36.963" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="74.771" cy="137.99" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="59.83" cy="177.984" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<circle cx="40.735" cy="229.106" r="2" style="fill:none;stroke-width:.3;stroke:#f00"/>
+	<path d="m4.019 220.027 41.24 26.977 95.955-53.004h77.573l95.953 53.003 41.24-26.977-21.604-101.637 16.683-10.913-22.328-105.044-142.078 18.453h-13.305l-123.588-16.051z" style="fill:none;stroke-width:3;stroke:#0f0"/>
+</svg>
