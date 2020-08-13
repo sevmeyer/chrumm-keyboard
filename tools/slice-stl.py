@@ -7,7 +7,7 @@
 
 """
 Slices STL objects along the z-axis
-and writes the slices to a DXF file.
+and writes each slice to a DXF file.
 
 Limitations:
   - Potentially slow
@@ -118,12 +118,13 @@ def getSnappedLines(lines, digits):
 
 
 def sliceStl(stlName, dxfName, sliceHeight, zBegin, zEnd, digits):
-	mesh = stl.mesh.Mesh.from_file(stlName)
-	zEnd = max(max(z) for z in mesh.z) if zEnd is None else zEnd
+	dxfStem = dxfName[:-4] if dxfName.lower().endswith('.dxf') else dxfName
 	epsilon = 10.0**-digits
 
-	dxfDoc = ezdxf.new('R12')
-	dxfSpace = dxfDoc.modelspace()
+	mesh = stl.mesh.Mesh.from_file(stlName)
+	zEnd = max(max(z) for z in mesh.z) if zEnd is None else zEnd
+	zLen = len(f'{zEnd:.{digits}f}')
+
 	z = zBegin
 	while z < zEnd:
 		zRound = round(z, digits)
@@ -131,10 +132,13 @@ def sliceStl(stlName, dxfName, sliceHeight, zBegin, zEnd, digits):
 		lines = getOrderedLines2D(lines, epsilon)
 		lines = getMergedLines2D(lines, epsilon)
 		lines = getSnappedLines(lines, digits)
+
+		dxfDoc = ezdxf.new('R12')
+		dxfSpace = dxfDoc.modelspace()
 		for a, b in lines:
 			dxfSpace.add_line((a[0], a[1], zRound), (b[0], b[1], zRound))
+		dxfDoc.saveas(f'{dxfStem}-{z:0{zLen}.{digits}f}.dxf')
 		z += sliceHeight
-	dxfDoc.saveas(dxfName)
 
 
 def main():
@@ -149,7 +153,7 @@ def main():
 	parser.add_argument('-d', metavar='DIGITS', type=int, default=3,
 		help='digits after decimal point for DXF (3)')
 	parser.add_argument('STL', help='input STL file')
-	parser.add_argument('DXF', help='output DXF file, overwrites existing')
+	parser.add_argument('DXF', help='output DXF base file, overwrites existing')
 	args = parser.parse_args()
 	sliceStl(args.STL, args.DXF, args.s, args.b, args.e, args.d)
 
