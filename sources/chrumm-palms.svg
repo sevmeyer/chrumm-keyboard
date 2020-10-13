@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="360mm" height="270mm" viewBox="0 0 360 270">
+	<sodipodi:namedview inkscape:document-units="mm">
+		<inkscape:grid empspacing="4" type="xygrid" units="mm" spacingx=".25" spacingy=".25"/>
+	</sodipodi:namedview>
+	<rect x="8" y="134" width="344" height="80" style="fill:none;stroke-width:.5;stroke:#00f"/>
+	<path d="m53.645 253.793 71.361-50.947-97.716-54.727-17.269 81.241z" style="fill:none;stroke-width:3;stroke:#0f0"/>
+	<path d="m306.355 253.793 43.624-24.433-17.269-81.241-97.716 54.727z" style="fill:none;stroke-width:3;stroke:#0f0"/>
+</svg>
