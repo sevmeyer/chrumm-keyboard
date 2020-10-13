@@ -9,14 +9,14 @@ Chrumm is provided without warranty of any kind.
 It is your own responsibility to fulfill all
 applicable health and safety requirements.
 
-- Fixed-split layout
+- Fixed-split
+- Tented
 - Columnar stagger
-- Tenting
 - Tilted thumb clusters
-- Integrated palm rests
+- Attached palm rests
 - Decent dampening
-- Reasonably close to ANSI
-- Dedicated function key row
+- Reasonably standard layout
+- Dedicated function row
 
 ![Front photo](images/front.jpg)
 
@@ -39,41 +39,48 @@ I learned about the importance of the diodes from [Dave Dribin].
 I used the following materials, based on availability,
 affordability, and personal preference:
 
-- Aluminium plates, 1.5mm
-- 79x Key switch (Cherry MX Silent Red)
-- 79x Key cap, 1U (Cherry MX profile)
-- 79x Diode, 1N4148
+- 74x MX switch (Cherry MX Silent Red)
+- 74x Diode, 1N4148
 - Insulated solid wire, 0.5mm (24AWG), tinned copper
 - Solder (Stannol Kristall 600, Sn96.5Ag3Cu0.5, REL0, 0.5mm)
 - [Adafruit ItsyBitsy 32u4 5V 16MHz]
 - USB cable, A to micro-B
+- Zip ties, 2.5mm wide
 
 ![Matrix](images/matrix.svg)
 
-![Key layers](images/keys.svg)
-
+[firmware]: https://github.com/sevmeyer/chrumm-firmware
 [QMK Hand-Wiring Guide]: https://github.com/qmk/qmk_firmware/blob/master/docs/hand_wire.md
 [Dave Dribin]: https://www.dribin.org/dave/keyboard/one_html/
 [Adafruit ItsyBitsy 32u4 5V 16MHz]: https://www.adafruit.com/product/3677
-[firmware]: https://github.com/sevmeyer/chrumm-firmware
 
 
 Body
 ----
 
-The body is made out of cork layers, with the goal to dampen
-vibrations and to decouple the top plates from the bottom.
-The layers are manually cut, glued, and sanded.
+The body is made out of foam layers, sandwiched between painted
+aluminium plates. The layers are manually cut and glued together.
 The `tools` directory includes a Python script to slice the
-STL files into layer outlines, which can be printed on paper.
-It should be possible to adapt the body for 3D printing or CNC milling,
-but that will increase its cost and limit the choice of materials.
-Note that the STL model does not yet include wire channels.
+STL model into layer stencils, which can be printed on paper.
 
-- Cork sheets
-- Sandpaper, P120 for shaping, P180 for smoothing
+- Laser-cut aluminium plates, 1.5mm
+- Acrylic paint primer, suitable for aluminium
+- Polyurethane acrylic paint
+- EVA foam sheets (Rayher Crepla)
+- Artificial leather for the palm rests
 - Flexible glue (UHU Max Repair Universal)
-- 12x Threaded insert, DIN 7965, M3, 8mm
-- 12x Button head screw, ISO 7380, M3, 8mm
 
-![Assembly of body layers](images/body.svg)
+
+Keys
+----
+
+For the thumb clusters, I recommend upside-down, 1.25u,
+bottom-row caps from a cylindrical profile (Cherry, OEM).
+
+![Key layout](images/layout.svg)
+
+The caps can be sourced from a single tenkeyless (TKL) set,
+though not all of the standard labels will match,
+and the layer key requires some improvisation.
+
+![Keycap allocation](images/caps.svg)

@@ -3,10 +3,9 @@ Tools
 
 Run the Python scripts with the `-h` option to check their usage.
 They depend on [ezdxf], [svgpathtools], and [numpy-stl], which can
-be installed with either:
+be installed locally with:
 
-	pip3 install --user ezdxf numpy-stl svgpathtools  # Local
-	sudo pip3 install ezdxf numpy-stl svgpathtools    # System-wide
+	pip install --user ezdxf numpy-stl svgpathtools
 
 [ezdxf]: https://github.com/mozman/ezdxf
 [numpy-stl]: https://github.com/WoLpH/numpy-stl

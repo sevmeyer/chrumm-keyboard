@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="728" height="272" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<rect width="728" height="272" style="fill:#fff"/>
+	<g style="fill:#eee;stroke-linejoin:round;stroke:#ddd">
+		<rect x="596.5" y="20.5" width="35" height="35"/>
+		<rect x="672.5" y="20.5" width="35" height="35"/>
+		<rect x="514.5" y="64.5" width="75" height="35"/>
+		<rect x="20.5" y="102.5" width="54" height="35"/>
+		<path d="m533.5 137.5v-35h56v73h-46v-38z"/>
+		<rect x="634.5" y="102.5" width="35" height="35"/>
+		<rect x="672.5" y="102.5" width="35" height="35"/>
+		<rect x="20.5" y="140.5" width="64" height="35"/>
+		<rect x="20.5" y="178.5" width="45" height="35"/>
+		<rect x="68.5" y="178.5" width="35" height="35"/>
+		<rect x="486.5" y="178.5" width="103" height="35"/>
+		<rect x="164.5" y="216.5" width="233" height="35"/>
+		<rect x="544.5" y="216.5" width="45" height="35"/>
+	</g>
+	<g style="fill:#fff;stroke-linejoin:round;stroke:#999">
+		<rect x="20.5" y="20.5" width="35" height="35"/>
+		<rect x="96.5" y="20.5" width="35" height="35"/>
+		<rect x="134.5" y="20.5" width="35" height="35"/>
+		<rect x="172.5" y="20.5" width="35" height="35"/>
+		<rect x="210.5" y="20.5" width="35" height="35"/>
+		<rect x="268.5" y="20.5" width="35" height="35"/>
+		<rect x="306.5" y="20.5" width="35" height="35"/>
+		<rect x="344.5" y="20.5" width="35" height="35"/>
+		<rect x="382.5" y="20.5" width="35" height="35"/>
+		<rect x="440.5" y="20.5" width="35" height="35"/>
+		<rect x="478.5" y="20.5" width="35" height="35"/>
+		<rect x="516.5" y="20.5" width="35" height="35"/>
+		<rect x="554.5" y="20.5" width="35" height="35"/>
+		<rect x="634.5" y="20.5" width="35" height="35" style="stroke:#f60"/>
+		<rect x="20.5" y="64.5" width="35" height="35"/>
+		<rect x="58.5" y="64.5" width="35" height="35"/>
+		<rect x="96.5" y="64.5" width="35" height="35"/>
+		<rect x="134.5" y="64.5" width="35" height="35"/>
+		<rect x="172.5" y="64.5" width="35" height="35"/>
+		<rect x="210.5" y="64.5" width="35" height="35"/>
+		<rect x="248.5" y="64.5" width="35" height="35"/>
+		<rect x="286.5" y="64.5" width="35" height="35"/>
+		<rect x="324.5" y="64.5" width="35" height="35"/>
+		<rect x="362.5" y="64.5" width="35" height="35"/>
+		<rect x="400.5" y="64.5" width="35" height="35"/>
+		<rect x="438.5" y="64.5" width="35" height="35"/>
+		<rect x="476.5" y="64.5" width="35" height="35"/>
+		<rect x="596.5" y="64.5" width="35" height="35" style="stroke:#f60"/>
+		<rect x="634.5" y="64.5" width="35" height="35" style="stroke:#f60"/>
+		<rect x="672.5" y="64.5" width="35" height="35" style="stroke:#f60"/>
+		<rect x="77.5" y="102.5" width="35" height="35"/>
+		<rect x="115.5" y="102.5" width="35" height="35"/>
+		<rect x="153.5" y="102.5" width="35" height="35"/>
+		<rect x="191.5" y="102.5" width="35" height="35"/>
+		<rect x="229.5" y="102.5" width="35" height="35"/>
+		<rect x="267.5" y="102.5" width="35" height="35"/>
+		<rect x="305.5" y="102.5" width="35" height="35"/>
+		<rect x="343.5" y="102.5" width="35" height="35"/>
+		<rect x="381.5" y="102.5" width="35" height="35"/>
+		<rect x="419.5" y="102.5" width="35" height="35"/>
+		<rect x="457.5" y="102.5" width="35" height="35"/>
+		<rect x="495.5" y="102.5" width="35" height="35"/>
+		<rect x="596.5" y="102.5" width="35" height="35" style="stroke:#f60"/>
+		<rect x="87.5" y="140.5" width="35" height="35"/>
+		<rect x="125.5" y="140.5" width="35" height="35"/>
+		<rect x="163.5" y="140.5" width="35" height="35"/>
+		<rect x="201.5" y="140.5" width="35" height="35"/>
+		<rect x="239.5" y="140.5" width="35" height="35"/>
+		<rect x="277.5" y="140.5" width="35" height="35"/>
+		<rect x="315.5" y="140.5" width="35" height="35"/>
+		<rect x="353.5" y="140.5" width="35" height="35"/>
+		<rect x="391.5" y="140.5" width="35" height="35"/>
+		<rect x="429.5" y="140.5" width="35" height="35"/>
+		<rect x="467.5" y="140.5" width="35" height="35"/>
+		<rect x="505.5" y="140.5" width="35" height="35" style="fill:#fed;stroke:#f60"/>
+		<rect x="106.5" y="178.5" width="35" height="35"/>
+		<rect x="144.5" y="178.5" width="35" height="35"/>
+		<rect x="182.5" y="178.5" width="35" height="35"/>
+		<rect x="220.5" y="178.5" width="35" height="35"/>
+		<rect x="258.5" y="178.5" width="35" height="35"/>
+		<rect x="296.5" y="178.5" width="35" height="35"/>
+		<rect x="334.5" y="178.5" width="35" height="35"/>
+		<rect x="372.5" y="178.5" width="35" height="35"/>
+		<rect x="410.5" y="178.5" width="35" height="35"/>
+		<rect x="448.5" y="178.5" width="35" height="35"/>
+		<rect x="106.5" y="178.5" width="35" height="35"/>
+		<rect x="144.5" y="178.5" width="35" height="35"/>
+		<rect x="182.5" y="178.5" width="35" height="35"/>
+		<rect x="220.5" y="178.5" width="35" height="35"/>
+		<rect x="258.5" y="178.5" width="35" height="35"/>
+		<rect x="296.5" y="178.5" width="35" height="35"/>
+		<rect x="334.5" y="178.5" width="35" height="35"/>
+		<rect x="372.5" y="178.5" width="35" height="35"/>
+		<rect x="410.5" y="178.5" width="35" height="35"/>
+		<rect x="448.5" y="178.5" width="35" height="35"/>
+		<rect x="634.5" y="178.5" width="35" height="35" style="fill:#fed;stroke:#f60"/>
+		<rect x="20.5" y="216.5" width="45" height="35" style="stroke:#f60"/>
+		<rect x="68.5" y="216.5" width="45" height="35" style="stroke:#f60"/>
+		<rect x="116.5" y="216.5" width="45" height="35" style="stroke:#f60"/>
+		<rect x="400.5" y="216.5" width="45" height="35" style="stroke:#f60"/>
+		<rect x="448.5" y="216.5" width="45" height="35" style="stroke:#f60"/>
+		<rect x="496.5" y="216.5" width="45" height="35" style="stroke:#f60"/>
+		<rect x="596.5" y="216.5" width="35" height="35" style="stroke:#f60"/>
+		<rect x="634.5" y="216.5" width="35" height="35" style="fill:#39d;stroke:#f60"/>
+		<rect x="672.5" y="216.5" width="35" height="35" style="stroke:#f60"/>
+	</g>
+	<g style="font-family:'Source Code Pro', monospace;font-size:14px;text-anchor:middle">
+		<text x="38" y="36">ESC</text>
+		<text x="114" y="36">F1</text>
+		<text x="152" y="36">F2</text>
+		<text x="190" y="36">F3</text>
+		<text x="228" y="36">F4</text>
+		<text x="286" y="36">F5</text>
+		<text x="324" y="36">F6</text>
+		<text x="362" y="36">F7</text>
+		<text x="400" y="36">F8</text>
+		<text x="458" y="36">F9</text>
+		<text x="496" y="36">F10</text>
+		<text x="534" y="36">F11</text>
+		<text x="572" y="36">F12</text>
+		<text x="38" y="80">~ `</text>
+		<text x="76" y="80">! 1</text>
+		<text x="114" y="80">@ 2</text>
+		<text x="152" y="80"># 3</text>
+		<text x="190" y="80">$ 4</text>
+		<text x="228" y="80">% 5</text>
+		<text x="266" y="80">^ 6</text>
+		<text x="304" y="80">&amp; 7</text>
+		<text x="342" y="80">* 8</text>
+		<text x="380" y="80">( 9</text>
+		<text x="418" y="80">) 0</text>
+		<text x="456" y="80">_ -</text>
+		<text x="494" y="80">+ =</text>
+		<text x="95" y="118">Q</text>
+		<text x="133" y="118">W</text>
+		<text x="171" y="118">E</text>
+		<text x="209" y="118">R</text>
+		<text x="247" y="118">T</text>
+		<text x="285" y="118">Y</text>
+		<text x="323" y="118">U</text>
+		<text x="361" y="118">I</text>
+		<text x="399" y="118">O</text>
+		<text x="437" y="118">P</text>
+		<text x="475" y="118">{ [</text>
+		<text x="513" y="118">} ]</text>
+		<text x="614" y="118">TAB</text>
+		<text x="105" y="156">A</text>
+		<text x="143" y="156">S</text>
+		<text x="181" y="156">D</text>
+		<text x="219" y="156">F</text>
+		<text x="257" y="156">G</text>
+		<text x="295" y="156">H</text>
+		<text x="333" y="156">J</text>
+		<text x="371" y="156">K</text>
+		<text x="409" y="156">L</text>
+		<text x="447" y="156">: ;</text>
+		<text x="485" y="156">" '</text>
+		<text x="523" y="156">| \</text>
+		<text x="652" y="194">| \</text>
+		<text x="124" y="194">Z</text>
+		<text x="162" y="194">X</text>
+		<text x="200" y="194">C</text>
+		<text x="238" y="194">V</text>
+		<text x="276" y="194">B</text>
+		<text x="314" y="194">N</text>
+		<text x="352" y="194">M</text>
+		<text x="390" y="194">&lt; ,</text>
+		<text x="428" y="194">&gt; .</text>
+		<text x="466" y="194">? /</text>
+		<text transform="scale(-1)" x="-43" y="-236">CTR</text>
+		<text transform="scale(-1)" x="-91" y="-236">BKS</text>
+		<text transform="scale(-1)" x="-139" y="-236">ALT</text>
+		<text transform="scale(-1)" x="-423" y="-236">ALT</text>
+		<text transform="scale(-1)" x="-471" y="-236">SP</text>
+		<text transform="scale(-1)" x="-519" y="-236">ENT</text>
+		<text x="614" y="232">SHF</text>
+		<text x="652" y="232" style="fill:#ffffff">LAY</text>
+		<text x="690" y="232">SHF</text>
+		<path d="m624.5 92.5-6-6m6 0.5v5.5h-5.5" style="fill:none;stroke:#000"/>
+		<path d="m662.5 48.5-6-6m6 0.5v5.5h-5.5" style="fill:none;stroke:#000"/>
+		<path d="m662.5 92.5-6-6m6 0.5v5.5h-5.5" style="fill:none;stroke:#000"/>
+		<path d="m700.5 92.5-6-6m6 0.5v5.5h-5.5" style="fill:none;stroke:#000"/>
+	</g>
+	<g style="fill:#39d;font-family:'Source Code Pro', monospace;font-size:14px;text-anchor:middle">
+		<text x="400" y="51">÷</text>
+		<text x="458" y="51">*</text>
+		<text x="304" y="95">7</text>
+		<text x="342" y="95">8</text>
+		<text x="380" y="95">9</text>
+		<text x="418" y="95">-</text>
+		<text x="494" y="95">PRT</text>
+		<text x="323" y="133">4</text>
+		<text x="361" y="133">5</text>
+		<text x="399" y="133">6</text>
+		<text x="437" y="133">+</text>
+		<text x="513" y="133">SCR</text>
+		<text x="333" y="171">1</text>
+		<text x="371" y="171">2</text>
+		<text x="409" y="171">3</text>
+		<text x="447" y="171">ENT</text>
+		<text x="523" y="171">BRK</text>
+		<text x="652" y="209">BRK</text>
+		<text x="390" y="209">0</text>
+		<text x="428" y="209">.</text>
+		<text transform="scale(-1)" x="-614" y="-69">HOM</text>
+		<text transform="scale(-1)" x="-652" y="-25">PGU</text>
+		<text x="652" y="78">PGD</text>
+		<text x="690" y="78">END</text>
+		<text transform="scale(-1)" x="-519" y="-221">INS</text>
+		<text transform="scale(-1)" x="-43" y="-221">DEL</text>
+	</g>
+	<g style="fill:#f60;font-family:'Source Code Pro', monospace;font-size:14px;text-anchor:middle">
+		<text x="523" y="190">ISO</text>
+		<text x="652" y="174">ANSI</text>
+	</g>
+</svg>
