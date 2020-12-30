@@ -22,7 +22,7 @@ applicable health and safety requirements.
 
 ![Inside photo](images/inside.jpg)
 
-[build log]: https://sev.dev/hardware/making-chrumm-keyboard/
+[build log]: https://sev.dev/hardware/chrumm-again/
 [Ergodox]: https://www.ergodox.io/
 [Redox]: https://github.com/mattdibi/redox-keyboard
 [Dactyl]: https://github.com/adereth/dactyl-keyboard
