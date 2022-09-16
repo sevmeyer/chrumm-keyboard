@@ -1,3 +1,7 @@
-.*/
-source/*.blend[1-9]*
-source/*.dxf
+__pycache__/
+*.py[cod]
+
+*.3mf
+*.gcode
+*.stl
+*.zip

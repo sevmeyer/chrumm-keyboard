@@ -1,0 +1,13 @@
+{
+"body": {
+    "minInnerHeight": 6.2,
+    "minRidgeWidth": 34 },
+"floor": {
+    "hexHoles": {
+        "xOffset": -3,
+        "yOffset": 16 }},
+"layout": {
+    "fingerStagger": [
+        [[-4.8, -2.4, 0.0, -2.4], [-7.2, -8.4], []],
+        [[-4.8, -2.4, 0.0, -2.4], [-7.2, -8.4], []]] }
+}

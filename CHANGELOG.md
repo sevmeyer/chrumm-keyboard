@@ -1,15 +1,23 @@
-## 0.2.0 (2020-10-12)
+0.3.0 (2022-09-16)
+------------------
 
-- Redesigned plates, to reduce the height and complexity of the body.
-- Removed center column, to simplify the wiring and create a more solid body.
-- Reduced thumb clusters from 4 to 3 keys each.
-- Increased thumb key size to 1.25u, to improve comfort and usability.
-- Arranged arrow keys in a diamond shape to move the sides closer together.
-- Added prongs to bottom plate to firmly attach the USB cable with zip ties.
-- Reduced the key pitch from 19 mm to 18.75 mm.
-- The bridged DXF file now includes all plates.
-- Reorganized logical key layers.
+- Implement programmatic construction of 3D printable body
+- Revise layout and layers
+- Add negative tilt for better ergonomics
+- Remove middle arrow keys in favor of layering
+- Remove generated files from repository in favor of release downloads
+- Switch to the CERN-OHL-W license
 
-## 0.1.0 (2020-07-02)
+0.2.0 (2020-10-12)
+------------------
 
-- Initial release.
+- Extend finger plates towards the middle to simplify the body
+- Add tent crease between pinky and ring finger to reduce height
+- Revise layout and layers
+- Remove unnecessary middle keys
+- Use 1.25u caps for the thumbs to improve comfort and homing accuracy
+
+0.1.0 (2020-07-02)
+------------------
+
+- Initial laser-cut aluminium plates glued on hand-made cork body

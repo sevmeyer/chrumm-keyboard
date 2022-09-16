@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="720" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<rect width="100%" height="100%" style="fill:#fff"/>
+	<g style="fill:#19e;font-family:'Source Code Pro',monospace;font-size:20px;font-weight:bold;text-anchor:middle">
+		<text x="332" y="256">alnum</text>
+		<text x="472" y="208">pinky</text>
+		<text x="572" y="192">extra</text>
+		<text x="320" y="404">thumb</text>
+		<text x="184" y="284">ridge</text>
+		<text x="428" y="440">hitch</text>
+		<text x="480" y="536">palm</text>
+		<text x="352" y="140">boss</text>
+		<text x="84" y="132">bracket</text>
+		<text x="104" y="384">encoder</text>
+		<text x="124" y="596">switch</text>
+	</g>
+	<g style="fill:#19e;font-family:'Source Code Pro',monospace;font-size:18px">
+		<text x="100" y="496">clip</text>
+		<text x="100" y="516">notch</text>
+		<text x="192" y="616">wing</text>
+		<text x="192" y="636">notch</text>
+	</g>
+	<g style="font-family:'Source Code Pro',monospace;font-size:16px;text-anchor:middle">
+		<text x="380" y="81">RB</text>
+		<text x="478" y="67">RB</text>
+		<text x="530" y="60">RB</text>
+		<text x="218" y="104">LB</text>
+		<text x="270" y="360">LF</text>
+		<text x="432" y="321">RF</text>
+		<text x="534" y="337">RF</text>
+		<text x="583" y="313">RF</text>
+		<text x="445" y="381">RF</text>
+		<text x="264" y="470">LF</text>
+		<text x="208" y="431">RF</text>
+		<text x="592" y="346">RB</text>
+		<text x="284" y="496">LB</text>
+		<text x="412" y="659">LF</text>
+		<text x="642" y="547">RF</text>
+		<text x="330" y="470">LB</text>
+		<text x="350" y="495">LF</text>
+		<text x="500" y="382">RB</text>
+		<text x="507" y="414">RF</text>
+	</g>
+	<g style="fill:none;stroke-linejoin:round;stroke-width:2;stroke:#000">
+		<path d="m74 542v10h-8v20h8v40h-8v20h8v10h100v-10h8v-20h-8v-40h8v-20h-8v-10z"/>
+		<path d="m144 537v-9h-40v9"/>
+		<path d="m311.3 464.8 32.6 41.5 182.6-89.7-13.1-51.5"/>
+		<path d="m400.7 59.9 90.1-12.5 61 290.7-82.3 39.8"/>
+		<path d="m200.4 87.6 192.3-26.6 57 263.3-190.8 45.7z"/>
+		<path d="m451.4 332 10.7 49.6-202.9 99.9-36.1-37.1"/>
+		<path d="m262.8 488.2 144 182.8 252.8-124.2-57.2-225.4"/>
+		<path d="m193 87.9-8 0.1v174m0 30v66m0 42v36.7h31.5l38.7-59.6"/>
+		<path d="m185 444.7v40.7h66.2"/>
+		<path d="m144 647v9h-40v-9"/>
+		<path d="m332 157h-11l-6-12v-23l-17-17-17 17v23l-6 12h-11"/>
+		<path d="m264 163h25v5l-10 10v11h-15"/>
+		<path d="m332 163h-25v5l10 10v11h15"/>
+		<path d="m175 104h-32v43l32 19z"/>
+		<path d="m498.8 46.3 43.5-6 27.9 130.5m6.3 29.3 24.2 113.3-41.6 20.5"/>
+		<path d="m162.1 359v40h45.7v-40z"/>
+	</g>
+	<g style="fill:#fff;stroke-linejoin:round;stroke:#000">
+		<path d="m169.5 134.9-10.5 6.1-10.5-6.1v-12.1l10.5-6.1 10.5 6.1z"/>
+		<circle cx="185" cy="379" r="12.5"/>
+		<path d="m286.5 122.5-2 4v2h2v4h-2v4h2v4h-2v4h2v4h-2v9h27v-9h-2v-4h2v-4h-2v-4h2v-4h-2v-4h2v-2l-2-4z"/>
+		<path d="m293.5 130.5-1 1v38l-10 10v3h31v-3l-10-10v-38l-1-1z"/>
+	</g>
+</svg>

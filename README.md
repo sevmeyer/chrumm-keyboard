@@ -1,86 +1,139 @@
 Chrumm keyboard
 ===============
 
-Chrumm is an ergonomic keyboard prototype, influenced by
-projects like the [Ergodox], [Redox], [Dactyl], and [Pteron].
-For more information, check out the [build log].
+Chrumm is an ergonomic keyboard prototype, influenced by many
+open hardware projects of the mechanical keyboard community,
+including the [Ergodox], [Dactyl], [Sofle], [Pteron],
+and the works of [Bastardkb].
 
-Chrumm is provided without warranty of any kind.
-It is your own responsibility to fulfill all
-applicable health and safety requirements.
+The default STL files can be downloaded from the [releases] page.
 
-- Fixed-split
-- Tented
-- Columnar stagger
-- Tilted thumb clusters
-- Attached palm rests
-- Decent dampening
-- Reasonably standard layout
-- Dedicated function row
+**Important:** This project is not yet complete.
+A PCB and new firmware is in the works.
+The default configuration may change.
 
-![Front photo](images/front.jpg)
+![Photo of the assembled body](images/body-outside.jpg)
 
-![Inside photo](images/inside.jpg)
+![Photo of the inside](images/body-inside.jpg)
 
-[build log]: https://sev.dev/hardware/chrumm-again/
 [Ergodox]: https://www.ergodox.io/
-[Redox]: https://github.com/mattdibi/redox-keyboard
 [Dactyl]: https://github.com/adereth/dactyl-keyboard
+[Sofle]: https://github.com/josefadamcik/SofleKeyboard
 [Pteron]: https://github.com/FSund/pteron-keyboard
-
-
-Electronics
------------
-
-The [firmware] is maintained in a separate repository.
-The electronics are hand-wired. I mostly followed existing guides,
-see the [QMK Hand-Wiring Guide] for a good overview. In particular,
-I learned about the importance of the diodes from [Dave Dribin].
-I used the following materials, based on availability,
-affordability, and personal preference:
-
-- 74x MX switch (Cherry MX Silent Red)
-- 74x Diode, 1N4148
-- Insulated solid wire, 0.5mm (24AWG), tinned copper
-- Solder (Stannol Kristall 600, Sn96.5Ag3Cu0.5, REL0, 0.5mm)
-- [Adafruit ItsyBitsy 32u4 5V 16MHz]
-- USB cable, A to micro-B
-- Zip ties, 2.5mm wide
-
-![Matrix](images/matrix.svg)
-
+[Bastardkb]: https://bastardkb.com/
+[releases]: https://github.com/sevmeyer/chrumm-keyboard/releases
 [firmware]: https://github.com/sevmeyer/chrumm-firmware
-[QMK Hand-Wiring Guide]: https://github.com/qmk/qmk_firmware/blob/master/docs/hand_wire.md
-[Dave Dribin]: https://www.dribin.org/dave/keyboard/one_html/
-[Adafruit ItsyBitsy 32u4 5V 16MHz]: https://www.adafruit.com/product/3677
 
 
-Body
-----
+Features
+--------
 
-The body is made out of foam layers, sandwiched between painted
-aluminium plates. The layers are manually cut and glued together.
-The `tools` directory includes a Python script to slice the
-STL model into layer stencils, which can be printed on paper.
+- Reasonably standard layout
+- Columnar stagger
+- Integrated split, tent, and tilt angles
+- Separate tenting for fingers, pinky, and thumb
+- Narrow size to make room for the mouse
+- Firmly attached palm rests
+- Single body and controller
+- Central rotary encoder
+- Designed for FFF 3D printing
+- Parametric construction with Python
 
-- Laser-cut aluminium plates, 1.5mm
-- Acrylic paint primer, suitable for aluminium
-- Polyurethane acrylic paint
-- EVA foam sheets (Rayher Crepla)
-- Artificial leather for the palm rests
-- Flexible glue (UHU Max Repair Universal)
+
+Printing
+--------
+
+I sliced the parts with [PrusaSlicer] and printed them on
+a Prusa Mini+ with PLA filament. Check the prusa directory
+for the configuration files. Other printers and filaments
+may require different settings.
+
+[PrusaSlicer]: https://www.prusa3d.com/prusaslicer/
 
 
-Keys
-----
+#### Body
+
+The body requires supports on the underside of the key plates,
+split brackets, encoder, and cable hook. The switch notches
+should print fine without supports.
+
+- Layer height: 0.15mm
+- Perimeters: 2
+- Solid layers: 5 bottom, 5 top
+- Infill: 15% rectilinear
+- Aligned rectilinear top infill (looks nice)
+
+![Supported faces of left body](images/slicer-body.png)
+
+
+#### Floor
+
+- Layer height: 0.2mm
+- Perimeters: 2
+- Solid layers: 4 bottom, 6 top
+- Infill: 15% rectilinear
+
+
+#### Palm rests
+
+The palm rests should be printed sideways, with their inward
+side on the printbed. This ensures that the curved top shell
+is as smooth and robust as possible.
+
+- Layer height: 0.2mm
+- Perimeters: 3
+- Solid layers: 4 bottom, 0 top (rely on overlapping perimeters)
+- Infill: 15% gyroid (omnidirectional strength)
+
+![Sliced left palm rest](images/slicer-palm.png)
+
+
+#### Encoder knob
+
+The encoder knob is printed upside down. It should be solid,
+without infill, to evenly distribute torsional stress.
+
+- Layer height: 0.15mm
+- Perimeters: 99
+
+
+Assembly
+--------
+
+Electronic parts:
+
+- 72x MX compatible switch
+- 1x EC11 rotary encoder, 12.5x13.2mm, 15mm flatted shaft (D shape), M7 nut mount
+    - Bourns PEC11R-4215F-N0024  (24 detents)
+    - Bourns PEC11R-4115F-N0018  (18 detents)
+    - Bourns PEC11R-4015F-N0024  (no detents)
+    - ...
+
+Assembly parts:
+
+- 12x Heat set insert, M3, 4mm length (not longer)
+- 12x Countersunk head screws, ISO 10642, M3, 6mm length
+- Zip ties, 2mm width, 1mm thick
+- Anti-slip rubber feet or foam layer
+
+Additional parts if the body is split:
+
+- 5x Nylon insert locknut, ISO 10511, M3
+- 5x Button head screws, ISO 7380-1, M3, 8mm length
+
+Note that the tenting of the body makes it difficult
+to reach the button head screws in a straight line.
+Use a ball-point driver, or a short-armed key.
+
+
+Layout
+------
+
+![Default key layout](images/layout-default.svg)
 
 For the thumb clusters, I recommend upside-down, 1.25u,
 bottom-row caps from a cylindrical profile (Cherry, OEM).
+With a bit of improvisation, the caps can be sourced from
+a single tenkeyless (TKL) set:
 
-![Key layout](images/layout.svg)
-
-The caps can be sourced from a single tenkeyless (TKL) set,
-though not all of the standard labels will match,
-and the layer key requires some improvisation.
-
-![Keycap allocation](images/caps.svg)
+![Keycap allocation](images/layout-caps.svg)
