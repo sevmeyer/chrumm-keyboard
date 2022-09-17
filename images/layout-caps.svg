@@ -49,9 +49,9 @@
 		<rect x="722.5" y="150.5" width="56" height="56" rx="2" ry="2"/>
 		<rect x="783.5" y="150.5" width="56" height="56" rx="2" ry="2"/>
 		<rect x="844.5" y="150.5" width="87" height="56" rx="2" ry="2" style="stroke:#ccc"/>
-		<rect x="941.5" y="150.5" width="56" height="56" rx="2" ry="2" style="fill:#19e"/>
-		<rect x="1002.5" y="150.5" width="56" height="56" rx="2" ry="2" style="fill:#19e"/>
-		<rect x="1063.5" y="150.5" width="56" height="56" rx="2" ry="2" style="fill:#19e"/>
+		<rect x="941.5" y="150.5" width="56" height="56" rx="2" ry="2" style="fill:#18d"/>
+		<rect x="1002.5" y="150.5" width="56" height="56" rx="2" ry="2" style="fill:#18d"/>
+		<rect x="1063.5" y="150.5" width="56" height="56" rx="2" ry="2" style="fill:#18d"/>
 		<rect x="20.5" y="211.5" width="103" height="56" rx="2" ry="2" style="stroke:#ccc"/>
 		<rect x="128.5" y="211.5" width="56" height="56" rx="2" ry="2"/>
 		<rect x="189.5" y="211.5" width="56" height="56" rx="2" ry="2"/>
@@ -77,18 +77,18 @@
 		<rect x="646.5" y="272.5" width="56" height="56" rx="2" ry="2"/>
 		<rect x="707.5" y="272.5" width="56" height="56" rx="2" ry="2"/>
 		<rect x="768.5" y="272.5" width="162" height="56" rx="2" ry="2" style="stroke:#ccc"/>
-		<rect x="1002.5" y="272.5" width="56" height="56" rx="2" ry="2" style="fill:#19e"/>
-		<rect x="20.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#19e"/>
-		<rect x="95.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#19e"/>
-		<rect x="170.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#19e"/>
+		<rect x="1002.5" y="272.5" width="56" height="56" rx="2" ry="2" style="fill:#18d"/>
+		<rect x="20.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#18d"/>
+		<rect x="95.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#18d"/>
+		<rect x="170.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#18d"/>
 		<rect x="245.5" y="333.5" width="385" height="56" rx="2" ry="2" style="stroke:#ccc"/>
-		<rect x="635.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#19e"/>
-		<rect x="710.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#19e"/>
-		<rect x="785.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#19e"/>
+		<rect x="635.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#18d"/>
+		<rect x="710.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#18d"/>
+		<rect x="785.5" y="333.5" width="70" height="56" rx="2" ry="2" style="fill:#18d"/>
 		<rect x="860.5" y="333.5" width="70" height="56" rx="2" ry="2" style="stroke:#ccc"/>
-		<rect x="941.5" y="333.5" width="56" height="56" rx="2" ry="2" style="fill:#19e"/>
-		<rect x="1002.5" y="333.5" width="56" height="56" rx="2" ry="2" style="fill:#19e"/>
-		<rect x="1063.5" y="333.5" width="56" height="56" rx="2" ry="2" style="fill:#19e"/>
+		<rect x="941.5" y="333.5" width="56" height="56" rx="2" ry="2" style="fill:#18d"/>
+		<rect x="1002.5" y="333.5" width="56" height="56" rx="2" ry="2" style="fill:#18d"/>
+		<rect x="1063.5" y="333.5" width="56" height="56" rx="2" ry="2" style="fill:#18d"/>
 	</g>
 	<g style="font-family:'Source Code Pro', monospace;font-size:20px;text-anchor:middle">
 		<text x="48.5" y="45">Esc</text>

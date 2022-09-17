@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="720" height="720" version="1.1" xmlns="http://www.w3.org/2000/svg">
 	<rect width="100%" height="100%" style="fill:#fff"/>
-	<g style="fill:#19e;font-family:'Source Code Pro',monospace;font-size:20px;font-weight:bold;text-anchor:middle">
+	<g style="fill:#18d;font-family:'Source Code Pro',monospace;font-size:20px;font-weight:bold;text-anchor:middle">
 		<text x="332" y="256">alnum</text>
 		<text x="472" y="208">pinky</text>
 		<text x="572" y="192">extra</text>
@@ -14,7 +14,7 @@
 		<text x="104" y="384">encoder</text>
 		<text x="124" y="596">switch</text>
 	</g>
-	<g style="fill:#19e;font-family:'Source Code Pro',monospace;font-size:18px">
+	<g style="fill:#18d;font-family:'Source Code Pro',monospace;font-size:18px">
 		<text x="100" y="496">clip</text>
 		<text x="100" y="516">notch</text>
 		<text x="192" y="616">wing</text>

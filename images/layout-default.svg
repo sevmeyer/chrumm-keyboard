@@ -41,7 +41,7 @@
 		<rect x="757.5" y="182.5" width="56" height="56" rx="2" ry="2"/>
 		<rect x="818.5" y="186.5" width="56" height="56" rx="2" ry="2"/>
 		<rect x="879.5" y="190.5" width="56" height="56" rx="2" ry="2"/>
-		<rect x="24.5" y="247.5" width="56" height="56" rx="2" ry="2" style="fill:#19e"/>
+		<rect x="24.5" y="247.5" width="56" height="56" rx="2" ry="2" style="fill:#18d"/>
 		<rect x="85.5" y="243.5" width="56" height="56" rx="2" ry="2"/>
 		<rect x="146.5" y="227.5" width="56" height="56" rx="2" ry="2"/>
 		<rect x="207.5" y="219.5" width="56" height="56" rx="2" ry="2"/>
@@ -73,10 +73,10 @@
 		<rect x="471.5" y="393.5" width="70" height="56" rx="2" ry="2"/>
 		<rect x="546.5" y="369.5" width="70" height="56" rx="2" ry="2"/>
 		<rect x="621.5" y="357.5" width="70" height="56" rx="2" ry="2"/>
-		<rect x="696.5" y="357.5" width="56" height="56" rx="2" ry="2" style="fill:#19e"/>
+		<rect x="696.5" y="357.5" width="56" height="56" rx="2" ry="2" style="fill:#18d"/>
 		<circle cx="449.5" cy="334.5" r="38"/>
 	</g>
-	<g style="fill:#19e">
+	<g style="fill:#18d">
 		<rect x="653" y="63" width="21" height="20" rx="2" ry="2"/>
 		<rect x="714" y="65" width="21" height="20" rx="2" ry="2"/>
 		<rect x="775" y="71" width="21" height="20" rx="2" ry="2"/>
@@ -169,7 +169,7 @@
 		<text x="656.5" y="382">Alt</text>
 		<text x="724.5" y="382" style="fill:#fff">Fn</text>
 	</g>
-	<g style="fill:#19e;font-family:'Source Code Pro', monospace;font-size:18px;text-anchor:middle">
+	<g style="fill:#18d;font-family:'Source Code Pro', monospace;font-size:18px;text-anchor:middle">
 		<text x="846.5" y="95">Ins</text>
 		<text x="907.5" y="107">Del</text>
 		<text x="846.5" y="172">Home</text>
@@ -204,7 +204,7 @@
 		<text x="724.5" y="335">.</text>
 		<text x="785.5" y="351">E</text>
 	</g>
-	<g style="fill:#19e">
+	<g style="fill:#18d">
 		<path d="m607.5 69v8m-4-4h8"/>
 		<path d="m110 78v8h8v-8z"/>
 		<path d="m169 71v10h2v-10zm10-0.5-7 5.5 7 5.5z"/>
