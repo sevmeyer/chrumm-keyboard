@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+*.3mf
+*.stl
+*.kicad_mod

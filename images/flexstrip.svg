@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="640" style="font-family:'Source Code Pro', monospace;font-size:24px;text-anchor:middle" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<marker id="m" style="overflow:visible">
+			<circle r="2" style="fill:#333"/>
+		</marker>
+	</defs>
+	<rect width="100%" height="100%" style="fill:#fff"/>
+	<g style="fill:#aaa">
+		<path d="m288 60-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344z"/>
+		<path d="m288 324-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344z"/>
+		<path d="m88 528-20 4h-36v4h36l20 4h544l20-4h36v-4h-36l-20-4h-544zm0 20-20 4h-36v4h36l20 4h544l20-4h36v-4h-36l-20-4h-544zm0 20-20 4h-36v4h36l20 4h544l20-4h36v-4h-36l-20-4h-544z"/>
+	</g>
+	<g style="fill:#ddd;opacity:.8">
+		<rect x="256" y="56" width="408" height="160"/>
+		<rect x="256" y="320" width="408" height="100"/>
+		<rect x="56" y="524" width="608" height="60"/>
+	</g>
+	<g style="fill:#333">
+		<text x="256" y="44">0</text>
+		<text x="288" y="44">4</text>
+		<text x="424" y="44">21</text>
+		<text x="616" y="44">45</text>
+		<text x="664" y="44">51</text>
+		<text x="304" y="244">6</text>
+		<text x="408" y="244">19</text>
+		<text x="632" y="244">47</text>
+		<text x="256" y="308">0</text>
+		<text x="332" y="308">9</text>
+		<text x="588" y="308">42</text>
+		<text x="664" y="308">51</text>
+		<text x="300" y="448">6</text>
+		<text x="620" y="448">45</text>
+		<text x="56" y="512">0</text>
+		<text x="104" y="512">6</text>
+		<text x="568" y="512">65</text>
+		<text x="664" y="512">76</text>
+		<text x="104" y="612">6</text>
+		<text x="632" y="612">71</text>
+	</g>
+	<g style="fill:#999">
+		<text x="520" y="154">FSN-22A-8</text>
+		<text x="460" y="378">FSN-22A-5</text>
+		<text x="360" y="562">FSN-23A-3</text>
+	</g>
+	<g style="fill:none;marker-end:url(#m);marker-start:url(#m);stroke-dasharray:12,8;stroke-width:2;stroke:#333">
+		<path d="m288 56 16 160"/>
+		<path d="m424 56-16 160"/>
+		<path d="m616 56 16 160"/>
+		<path d="m328 320-24 100"/>
+		<path d="m592 320 24 100"/>
+		<path d="m104 524v60"/>
+		<path d="m576 524 48 60"/>
+	</g>
+	<g style="fill:#333">
+		<circle cx="256" cy="56" r="4"/>
+		<circle cx="664" cy="56" r="4"/>
+		<circle cx="256" cy="320" r="4"/>
+		<circle cx="664" cy="320" r="4"/>
+		<circle cx="56" cy="524" r="4"/>
+		<circle cx="664" cy="524" r="4"/>
+	</g>
+	<g style="fill:none;opacity:.8;stroke-width:10;stroke:#ccc">
+		<path d="m940 116v24c0 9-7 15-16 16s-167 24-176 24-16-7-16-16 7-16 16-16 71 8 80 8 16-7 16-16v-24"/>
+		<path d="m1028 352v44c0 9-7 16-16 16h-264c-9 0-16-7-16-16v-44"/>
+		<path d="m1236 508v48c0 9-7 16-16 16s-463-36-472-36-16 7-16 16v32"/>
+	</g>
+	<g style="fill:none;stroke-width:4;stroke:#aaa">
+		<path d="m940 92v48c0 9-7 15-16 16s-167 24-176 24-16-7-16-16 7-16 16-16 71 8 80 8 16-7 16-16v-48"/>
+		<path d="m1028 328v68c0 9-7 16-16 16h-264c-9 0-16-7-16-16v-68"/>
+		<path d="m1236 484v72c0 9-7 16-16 16s-463-36-472-36-16 7-16 16v56"/>
+	</g>
+</svg>

@@ -1,7 +1,0 @@
-__pycache__/
-*.py[cod]
-
-*.3mf
-*.gcode
-*.stl
-*.zip

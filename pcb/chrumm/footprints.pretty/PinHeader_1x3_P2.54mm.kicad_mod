@@ -1,0 +1,36 @@
+(footprint "PinHeader_1x3_P2.54mm" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (attr through_hole board_only exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+  (fp_text reference "REF**" (at 0 -4.74) (layer "F.Fab")
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp f50cd875-ad61-4c78-ac8d-eee39512d049)
+  )
+  (fp_text value "PinHeader_1x3_P2.54mm" (at 0 0) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp a0f6403e-976f-4af5-ba62-8ec7d1aa5e2d)
+  )
+  (fp_line (start -1.27 -1.27) (end 1.27 -1.27)
+    (stroke (width 0.2) (type default)) (layer "F.SilkS") (tstamp e2ac55b4-ce85-424e-aec7-6dfd50e1e361))
+  (fp_poly
+    (pts
+      (arc (start -1.27 3.302) (mid -1.12121 3.66121) (end -0.762 3.81))
+      (arc (start 0.762 3.81) (mid 1.12121 3.66121) (end 1.27 3.302))
+      (arc (start 1.27 -3.302) (mid 1.12121 -3.66121) (end 0.762 -3.81))
+      (arc (start -0.762 -3.81) (mid -1.12121 -3.66121) (end -1.27 -3.302))
+    )
+
+    (stroke (width 0.2) (type solid)) (fill none) (layer "F.SilkS") (tstamp c9cbe3f8-7b0f-4f8f-abb1-95acbf3b37d8))
+  (fp_poly
+    (pts
+      (xy 1.27 -3.81)
+      (xy 1.27 3.81)
+      (xy -1.27 3.81)
+      (xy -1.27 -3.175)
+      (xy -0.635 -3.81)
+    )
+
+    (stroke (width 0.1) (type solid)) (fill none) (layer "F.Fab") (tstamp 6fcd65ad-0d35-4958-aae5-d402fec6ed41))
+  (pad "1" thru_hole roundrect (at 0 -2.54) (size 1.7 1.7) (drill 1) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.15) (tstamp a031e248-75c7-4b07-9f28-fc9c300b43f6))
+  (pad "2" thru_hole circle (at 0 0) (size 1.7 1.7) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 40d62885-ceb8-4c17-8b34-716b386af5cb))
+  (pad "3" thru_hole circle (at 0 2.54) (size 1.7 1.7) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 01ab6706-7706-4328-a6eb-ebc3eb410c3c))
+)

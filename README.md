@@ -1,139 +1,126 @@
 Chrumm keyboard
 ===============
 
-Chrumm is an ergonomic keyboard prototype, influenced by many
-open hardware projects of the mechanical keyboard community,
-including the [Ergodox], [Dactyl], [Sofle], [Pteron],
-and the works of [Bastardkb].
+Chrumm is an open-hardware ergonomic keyboard,
+made of a 3D-printable body, a bendable PCB,
+and custom firmware for the Raspberry Pi Pico.
 
-The default STL files can be downloaded from the [releases] page.
+This repository contains all relevant source files.
+The generated files can be downloaded from the [releases] page.
 
-**Important:** This project is not yet complete.
-A PCB and new firmware is in the works.
-The default configuration may change.
+I share these files in the hope that they are useful, or
+at least interesting to others. Keep in mind that this is
+a free, do-it-yourself project. What you see is what you get.
+Make sure to check the license.
 
-![Photo of the assembled body](images/body-outside.jpg)
+[releases]: https://github.com/sevmeyer/chrumm-keyboard/releases/
 
-![Photo of the inside](images/body-inside.jpg)
+![Front view of the finished keyboard](images/front.jpg)
 
-[Ergodox]: https://www.ergodox.io/
-[Dactyl]: https://github.com/adereth/dactyl-keyboard
-[Sofle]: https://github.com/josefadamcik/SofleKeyboard
-[Pteron]: https://github.com/FSund/pteron-keyboard
-[Bastardkb]: https://bastardkb.com/
-[releases]: https://github.com/sevmeyer/chrumm-keyboard/releases
-[firmware]: https://github.com/sevmeyer/chrumm-firmware
+![Inside view with installed electronics](images/inside.jpg)
 
 
 Features
 --------
 
-- Reasonably standard layout
-- Columnar stagger
-- Integrated split, tent, and tilt angles
-- Separate tenting for fingers, pinky, and thumb
-- Narrow size to make room for the mouse
-- Firmly attached palm rests
-- Single body and controller
-- Central rotary encoder
-- Designed for FFF 3D printing
-- Parametric construction with Python
+Chrumm features a column staggered layout with simple thumb clusters.
+The right side has an additional column, to better approximate
+the standard ANSI layout, and to provide dedicated arrow keys.
+A central encoder allows for rotational input.
+
+The body is a robust monoblock without visible screws. It has
+integrated split, tent, and tilt angles, similar to commercial
+ergonomic boards. The palm rests and the USB cable are firmly
+attached, so that everything can be moved around without hassle.
+
+The STL files are generated programmatically, with a pure
+Python package that has no dependencies. They are optimized
+for FFF 3D printing. Most parts are printed sideways, to
+produce a smooth surface without the need of post-processing.
+Custom supports minimize the print time and filament cost.
+
+The body houses two reversible, bendable, interconnected PCBs.
+They are powered by a Raspberry Pi Pico.
 
 
-Printing
---------
+Credit
+------
 
-I sliced the parts with [PrusaSlicer] and printed them on
-a Prusa Mini+ with PLA filament. Check the prusa directory
-for the configuration files. Other printers and filaments
-may require different settings.
+Chrumm would not exist without the shared knowledge of the
+mechanical keyboard community.
 
-[PrusaSlicer]: https://www.prusa3d.com/prusaslicer/
+I found inspiration on [Reddit], [KBD.news], [geekhack], and
+learned a lot from the [PCB guides] by ai03 and Ruiqi Mao, the
+[Keyboard posts] by Masterzen, and the [Matrix Help] by Dave Dribin.
 
+The layout and body is influenced by projects like the [Ergodox],
+[Dactyl], [Sofle], [Pteron], and everything from [Bastardkb].
+I also used established open hardware repositories for reference,
+including the [UHK60], [Skeletyl], [Sofle], [Corne], and [Torn].
 
-#### Body
-
-The body requires supports on the underside of the key plates,
-split brackets, encoder, and cable hook. The switch notches
-should print fine without supports.
-
-- Layer height: 0.15mm
-- Perimeters: 2
-- Solid layers: 5 bottom, 5 top
-- Infill: 15% rectilinear
-- Aligned rectilinear top infill (looks nice)
-
-![Supported faces of left body](images/slicer-body.png)
-
-
-#### Floor
-
-- Layer height: 0.2mm
-- Perimeters: 2
-- Solid layers: 4 bottom, 6 top
-- Infill: 15% rectilinear
-
-
-#### Palm rests
-
-The palm rests should be printed sideways, with their inward
-side on the printbed. This ensures that the curved top shell
-is as smooth and robust as possible.
-
-- Layer height: 0.2mm
-- Perimeters: 3
-- Solid layers: 4 bottom, 0 top (rely on overlapping perimeters)
-- Infill: 15% gyroid (omnidirectional strength)
-
-![Sliced left palm rest](images/slicer-palm.png)
-
-
-#### Encoder knob
-
-The encoder knob is printed upside down. It should be solid,
-without infill, to evenly distribute torsional stress.
-
-- Layer height: 0.15mm
-- Perimeters: 99
-
-
-Assembly
---------
-
-Electronic parts:
-
-- 72x MX compatible switch
-- 1x EC11 rotary encoder, 12.5x13.2mm, 15mm flatted shaft (D shape), M7 nut mount
-    - Bourns PEC11R-4215F-N0024  (24 detents)
-    - Bourns PEC11R-4115F-N0018  (18 detents)
-    - Bourns PEC11R-4015F-N0024  (no detents)
-    - ...
-
-Assembly parts:
-
-- 12x Heat set insert, M3, 4mm length (not longer)
-- 12x Countersunk head screws, ISO 10642, M3, 6mm length
-- Zip ties, 2mm width, 1mm thick
-- Anti-slip rubber feet or foam layer
-
-Additional parts if the body is split:
-
-- 5x Nylon insert locknut, ISO 10511, M3
-- 5x Button head screws, ISO 7380-1, M3, 8mm length
-
-Note that the tenting of the body makes it difficult
-to reach the button head screws in a straight line.
-Use a ball-point driver, or a short-armed key.
+[Reddit]: https://old.reddit.com/r/ErgoMechKeyboards+MechanicalKeyboards/
+[KBD.news]: https://kbd.news/
+[geekhack]: https://geekhack.org
+[PCB guides]: https://wiki.ai03.com/books/pcb-design
+[Keyboard posts]: https://www.masterzen.fr/tag/#mechanical-keyboards
+[Matrix Help]: https://www.dribin.org/dave/keyboard/one_html/
+[Ergodox]: https://www.ergodox.io/
+[Dactyl]: https://github.com/adereth/dactyl-keyboard
+[Sofle]: https://github.com/josefadamcik/SofleKeyboard
+[Pteron]: https://github.com/FSund/pteron-keyboard
+[Bastardkb]: https://bastardkb.com/
+[UHK60]: https://github.com/UltimateHackingKeyboard/uhk60v1-electronics
+[Skeletyl]: https://github.com/Bastardkb/Skeletyl-PCB-plate
+[Corne]: https://github.com/foostan/crkbd
+[Torn]: https://github.com/rtitmuss/torn
 
 
 Layout
 ------
 
-![Default key layout](images/layout-default.svg)
+![Default logical layout with two layers](images/layout.svg)
 
-For the thumb clusters, I recommend upside-down, 1.25u,
-bottom-row caps from a cylindrical profile (Cherry, OEM).
-With a bit of improvisation, the caps can be sourced from
-a single tenkeyless (TKL) set:
 
-![Keycap allocation](images/layout-caps.svg)
+Material
+--------
+
+Mechanical:
+
+- 12x Threaded insert, M3, 4mm hole diameter, max 5.7mm length
+- 12x Countersunk screw, M3, 8mm total length, ISO 10642
+-  7x Hex nut with nylon insert, M3, ISO 10511
+-  2x Hex nut with nylon insert, M2
+-  7x Socket head cap screw, M3, 8mm thread length, ISO 4762 (*)
+-  2x Socket head cap screw, M2, 6mm thread length, ISO 4762
+-  2x Ziptie, 2mm width, 1mm thickness
+- 14x 3M Bumpon SJ5302, hemispherical, 8mm diameter, 2mm height
+-  2x Artificial leather, ~190x130mm, max 1.2mm thickness
+- Glue for artificial leather on printed filament
+
+Electronic:
+
+-  2x PCB
+-  1x Raspberry Pi Pico, SC0915, without pre-soldered headers
+-  1x USB cable, A to micro-B with small head, shielded, max 4mm diameter
+- 64x Diode, 1N4148, DO-35 through-hole format
+- 64x MX switch
+-  1x Bourns PEC11R-4215F-N0024 rotary encoder, 15mm flatted D-shaft
+-  1x TE Flexstrip FSN-22A-8, 0.1" pitch, 2" length, 8 conductors (**)
+-  1x TE Flexstrip FSN-22A-5, 0.1" pitch, 2" length, 5 conductors (**)
+-  1x TE Flexstrip FSN-23A-3, 0.1" pitch, 3" length, 3 conductors (**)
+
+(*) Some of the screws are difficult to reach and
+require a ball-point driver, or a short-armed key.
+
+(**) It might be cheaper to buy strips with
+more conductors and cut them apart as needed.
+
+
+Images
+------
+
+![Print and assembly of the body](images/body.jpg)
+
+![Palm rests wrapped with artificial leather](images/palms.jpg)
+
+![Preparation and installation of the PCB](images/pcb.jpg)

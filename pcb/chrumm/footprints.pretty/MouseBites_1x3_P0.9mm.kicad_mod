@@ -1,0 +1,15 @@
+(footprint "MouseBites_1x3_P0.9mm" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (attr board_only exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+  (fp_text reference "REF**" (at 0 0 unlocked) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 658e956d-b5b2-4794-8b25-9320e5f50fe5)
+  )
+  (fp_text value "MouseBites_1x3_P0.9mm" (at 0 0 unlocked) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 37079fb6-4e82-409b-954c-b2cd8fed364f)
+  )
+  (pad "" np_thru_hole circle (at -0.9 0) (size 0.5 0.5) (drill 0.5) (layers "F&B.Cu" "*.Mask") (tstamp 2abee5e4-bdce-4c99-8e6c-abdda37adfcb))
+  (pad "" np_thru_hole circle (at 0 0) (size 0.5 0.5) (drill 0.5) (layers "F&B.Cu" "*.Mask") (tstamp fd6fec20-1bb2-46d9-a541-c84b7cfef6ed))
+  (pad "" np_thru_hole circle (at 0.9 0) (size 0.5 0.5) (drill 0.5) (layers "F&B.Cu" "*.Mask") (tstamp 260b6e6f-f317-4b38-b989-9bb178a20d29))
+)
