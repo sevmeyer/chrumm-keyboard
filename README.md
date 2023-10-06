@@ -7,6 +7,8 @@ and custom firmware for the Raspberry Pi Pico.
 
 This repository contains all relevant source files.
 The generated files can be downloaded from the [releases] page.
+Additional documentation for each component can be
+found in the respective subdirectories.
 
 I share these files in the hope that they are useful, or
 at least interesting to others. Keep in mind that this is
@@ -104,7 +106,7 @@ Electronic:
 -  1x USB cable, A to micro-B with small head, shielded, max 4mm diameter
 - 64x Diode, 1N4148, DO-35 through-hole format
 - 64x MX switch
--  1x Bourns PEC11R-4215F-N0024 rotary encoder, 15mm flatted D-shaft
+-  1x Bourns PEC11R-4215F-N0024 rotary encoder, M7 nut mount, 15mm flatted D-shaft
 -  1x TE Flexstrip FSN-22A-8, 0.1" pitch, 2" length, 8 conductors (**)
 -  1x TE Flexstrip FSN-22A-5, 0.1" pitch, 2" length, 5 conductors (**)
 -  1x TE Flexstrip FSN-23A-3, 0.1" pitch, 3" length, 3 conductors (**)
