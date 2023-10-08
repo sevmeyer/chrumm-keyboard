@@ -98,6 +98,7 @@ Mechanical:
 - 14x 3M Bumpon SJ5302, hemispherical, 8mm diameter, 2mm height
 -  2x Artificial leather, ~190x130mm, max 1.2mm thickness
 - Glue for artificial leather on printed filament
+- Keycaps (photo: Akko WOB Building Blocks, MDA profile)
 
 Electronic:
 

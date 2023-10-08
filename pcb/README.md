@@ -14,6 +14,12 @@ The switch pin holes are implemented as slots, to
 provide a snug fit for the flat pins, and thus
 minimize the required amount of solder.
 
+A jig is provided to bend the diode legs uniformly.
+Note that the gap between the PCB and the body is only
+about 1mm. Therefore, the diodes are soldered on the
+side facing away from the body. After soldering, the
+legs are cut reasonably flush on the body-facing side.
+
 [KiCad]: https://www.kicad.org/
 
 
