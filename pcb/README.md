@@ -46,6 +46,7 @@ the relevant specifications, use them at your own discretion:
 
 - Standard PCB (not flex)
 - Single pieces (not panelized)
+- Layers: 2
 - Material: FR4 TG 150-160
 - Thickness: 0.8mm (at most)
 - Surface finish: HASL (lead free)
