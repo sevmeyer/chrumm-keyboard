@@ -21,19 +21,19 @@
 // HID usage
 // ---------
 
-#define MATRIX_MAIN_LAYER  {\
-    kESC,  k1,   k2,   k3,    k4,    k5,   k6,    k7,    k8,    k9,   k0,    kMINUS,kEQUAL, \
-    kTAB,  kQ,   kW,   kE,    kR,    kT,   kY,    kU,    kI,    kO,   kP,    kLBRAC,kRBRAC, \
-    cFN,   kA,   kS,   kD,    kF,    kG,   kH,    kJ,    kK,    kL,   kCOLON,kQUOTE,kBKSL,  \
-    kLSHFT,kZ,   kX,   kC,    kV,    kB,   kN,    kM,    kCOMMA,kDOT, kSLASH,kUP,   kRSHFT, \
-    kLCTRL,kNONE,kLGUI,kLALT, kSPACE,kBKSP,kENTER,kSPACE,kRALT, kDEL, kLEFT, kDOWN, kRIGHT  }
+#define MATRIX_BASE_LAYER  {\
+    kESC,   k1,     k2,     k3,     k4,     k5,     k6,     k7,     k8,     k9,     k0,     kMINUS, kEQUAL, \
+    kTAB,   kQ,     kW,     kE,     kR,     kT,     kY,     kU,     kI,     kO,     kP,     kLBRAC, kRBRAC, \
+    cFN,    kA,     kS,     kD,     kF,     kG,     kH,     kJ,     kK,     kL,     kCOLON, kQUOTE, kBKSL,  \
+    kLSHFT, kZ,     kX,     kC,     kV,     kB,     kN,     kM,     kCOMMA, kDOT,   kSLASH, kUP,    kRSHFT, \
+    kLCTRL, kNONE,  kLGUI,  kLALT,  kSPACE, kBKSP,  kENTER, kSPACE, kRALT,  kDEL,   kLEFT,  kDOWN,  kRIGHT  }
 
 #define MATRIX_FN_LAYER  {\
-    kTILDE,kF7,  kF8,  kF9,   kF10,  kF11, kF12,  kp7,   kp8,   kp9,  kpSUB, kBKSP, kESC,   \
-    kCAPLK,kF1,  kF2,  kF3,   kF4,   kF5,  kF6,   kp4,   kp5,   kp6,  kpADD, kpLPAR,kpRPAR, \
-    cFN,   cPLAY,cPREV,cPAUSE,cNEXT, cSTOP,kNONE, kp1,   kp2,   kp3,  kpDIV, kNONE, kNONE,  \
-    kLSHFT,kBOOT,cRWND,cCALC, cFFWD, kMUTE,kNUMLK,kp0,   kpDOT, kpENT,kpMUL, kPGUP, kRSHFT, \
-    kLCTRL,kNONE,kLGUI,kLALT, kSPACE,kBKSP,kENTER,kSPACE,kRALT, kINS, kHOME, kPGDN, kEND    }
+    kTILDE, kF7,    kF8,    kF9,    kF10,   kF11,   kF12,   kp7,    kp8,    kp9,    kpSUB,  kBKSP,  kESC,   \
+    kCAPLK, kF1,    kF2,    kF3,    kF4,    kF5,    kF6,    kp4,    kp5,    kp6,    kpADD,  kpLPAR, kpRPAR, \
+    cFN,    cPLAY,  cPREV,  cPAUSE, cNEXT,  cSTOP,  kNONE,  kp1,    kp2,    kp3,    kpDIV,  kNONE,  kNONE,  \
+    kLSHFT, kBOOT,  kNONE,  cCALC,  kNONE,  kMUTE,  kNUMLK, kp0,    kpDOT,  kpENT,  kpMUL,  kPGUP,  kRSHFT, \
+    kLCTRL, kNONE,  kLGUI,  kLALT,  kSPACE, kBKSP,  kENTER, kSPACE, kRALT,  kINS,   kHOME,  kPGDN,  kEND    }
 
 #define ENCODER_CW_USAGE   kVOLUP
 #define ENCODER_CCW_USAGE  kVOLDN

@@ -95,7 +95,7 @@ static void debounce(uint key, bool signal)
 static void report(uint key, bool signal)
 {
     static const uint32_t layers[2][MATRIX_ROWS*MATRIX_COLS] = {
-        MATRIX_MAIN_LAYER,
+        MATRIX_BASE_LAYER,
         MATRIX_FN_LAYER };
 
     static bool layer = 0;
