@@ -1,6 +1,8 @@
 #include "chrumm/matrix.h"
 #include "chrumm/config.h"
 #include "chrumm/hid.h"
+#include "chrumm/usage.h"
+#include <pico/bootrom.h>
 #include <pico/stdlib.h>
 
 
@@ -94,30 +96,38 @@ static void report(uint key, bool signal)
 {
     static const uint32_t layers[2][MATRIX_ROWS*MATRIX_COLS] = {
         MATRIX_MAIN_LAYER,
-        MATRIX_FN_LAYER};
+        MATRIX_FN_LAYER };
 
-    static uint layer = 0;
+    static bool layer = 0;
     static uint fnTaps = 0;
+    static uint bootTaps = 0;
 
-    if (layers[0][key] == cFN || layers[1][key] == cFN) {
+    const uint32_t active = layers[layer][key];
+    const uint32_t inactive = layers[!layer][key];
+
+    if (active == cFN || inactive == cFN) {
         if (signal) {
-            // Reset layer unless there was a double tap.
-            if (fnTaps != 2) layer = 0;
-            if (fnTaps  > 2) fnTaps = 0;
+            if (fnTaps != FN_KEY_TAPS) layer = 0;
+            if (fnTaps > FN_KEY_TAPS) fnTaps = 0;
         }
         else {
+            ++fnTaps;
             layer = 1;
-            fnTaps += 1;
         }
     }
     else if (signal) {
         // Remove both codes, because the layer could
         // have changed between key press and release.
-        hid_remove(layers[0][key]);
-        hid_remove(layers[1][key]);
+        hid_remove(active);
+        hid_remove(inactive);
+    }
+    else if (active == kBOOT) {
+        if (++bootTaps >= BOOT_KEY_TAPS)
+            reset_usb_boot(0, 0);
     }
     else {
-        hid_add(layers[layer][key]);
+        hid_add(active);
         fnTaps = 0;
+        bootTaps = 0;
     }
 }

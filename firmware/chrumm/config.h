@@ -32,7 +32,7 @@
     kTILDE,kF7,  kF8,  kF9,   kF10,  kF11, kF12,  kp7,   kp8,   kp9,  kpSUB, kBKSP, kESC,   \
     kCAPLK,kF1,  kF2,  kF3,   kF4,   kF5,  kF6,   kp4,   kp5,   kp6,  kpADD, kpLPAR,kpRPAR, \
     cFN,   cPLAY,cPREV,cPAUSE,cNEXT, cSTOP,kNONE, kp1,   kp2,   kp3,  kpDIV, kNONE, kNONE,  \
-    kLSHFT,kNONE,cRWND,cCALC, cFFWD, kMUTE,kNUMLK,kp0,   kpDOT, kpENT,kpMUL, kPGUP, kRSHFT, \
+    kLSHFT,kBOOT,cRWND,cCALC, cFFWD, kMUTE,kNUMLK,kp0,   kpDOT, kpENT,kpMUL, kPGUP, kRSHFT, \
     kLCTRL,kNONE,kLGUI,kLALT, kSPACE,kBKSP,kENTER,kSPACE,kRALT, kINS, kHOME, kPGDN, kEND    }
 
 #define ENCODER_CW_USAGE   kVOLUP
@@ -49,3 +49,6 @@
 #define MATRIX_DEBOUNCE_TICKS   8
 #define ENCODER_KEYPRESS_TICKS  40
 #define LED_BLINK_TICKS         500
+
+#define FN_KEY_TAPS    2
+#define BOOT_KEY_TAPS  3

@@ -23,11 +23,14 @@ alternative layer until `Fn` is tapped again.
 Optionally, the rotation signals of an EC11 encoder can be
 mapped to virtual key presses.
 
+The special `kBOOT` keycode (Fn+Z) can be tapped three times
+to put the keyboard into bootloader mode without the need to
+unplug the USB cable.
+
 For debugging purposes, the on-board LED of the Pico indicates
 non-default lock states. When Caps Lock is on, the LED is on.
 When Num Lock is off, the LED blinks once every 2 seconds.
 
-[Raspberry Pi Pico]: https://www.raspberrypi.com/products/raspberry-pi-pico/
 [USB HID]: https://www.usb.org/document-library/device-class-definition-hid-111
 
 
@@ -54,10 +57,12 @@ Install
 
 Hold down the `BOOTSEL` button on the Pico while plugging in
 the USB cable. It should show up as a USB storage device.
+After the first install, you can keep the keyboard plugged in
+and instead tap Fn+Z three times.
+
 Drag-and-drop the uf2 binary from the build directory onto the device.
 The Pico should automatically restart and run the firmware.
-
-Alternatively, install [picotool] and run:
+Alternatively, install [picotool] and use:
 
     picotool load build/chrumm.uf2 --force
     picotool reboot

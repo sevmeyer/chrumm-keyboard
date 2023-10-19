@@ -4,6 +4,9 @@
 // https://usb.org/document-library/hid-usage-tables-14
 
 
+#define kBOOT  0x000000
+
+
 // Keyboard Page (0x07)
 // --------------------
 
