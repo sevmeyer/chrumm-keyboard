@@ -2,10 +2,19 @@ Chrumm keyboard firmware
 ========================
 
 The firmware is written in C for the [Raspberry Pi Pico].
+If you instead prefer a more standard toolkit, check out
+the experimental [QMK config] for Chrumm.
 
-It implements two [USB HID] interfaces. The primary interface
-acts as a standard Boot Keyboard. The secondary interface
-sends HID Consumer page codes for application-specific controls.
+[Raspberry Pi Pico]: https://www.raspberrypi.com/products/raspberry-pi-pico/
+[QMK config]: https://github.com/sevmeyer/chrumm-qmk
+
+
+Features
+--------
+
+The firmware implements two [USB HID] interfaces. Interface 0 acts
+as a standard Boot Keyboard. Interface 1 sends HID Consumer codes
+for application-specific controls, including multimedia.
 
 Two layers are available. Hold down the `Fn` key to momentarily
 activate the alternative layer. Double tap `Fn` to stay on the
