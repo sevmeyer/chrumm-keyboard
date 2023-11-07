@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.20)
 include($ENV{PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 # Project
-project(chrumm VERSION 1.0.0)
+project(chrumm VERSION 1.0.1)
 set(CMAKE_C_STANDARD 11)
 pico_sdk_init()
 
