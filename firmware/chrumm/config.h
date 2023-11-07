@@ -43,11 +43,11 @@
 // ------
 
 #define WATCHDOG_TIMEOUT_MS  100
-#define PIN_SETTLE_TIME_US   5
+#define PIN_SETTLE_TIME_US   10
 #define TICK_INTERVAL_US     500
 
 #define MATRIX_DEBOUNCE_TICKS   8
-#define ENCODER_KEYPRESS_TICKS  40
+#define ENCODER_KEYPRESS_TICKS  30
 #define LED_BLINK_TICKS         500
 
 #define FN_KEY_TAPS    2
