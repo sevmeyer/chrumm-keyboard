@@ -84,10 +84,10 @@ static void debounce(uint key, bool signal)
     // The hysterisis counter reflects how often the signal
     // has matched the state bit in recent history. We add
     // or subtract a value of 2 to jump over the state bit.
-    //             _
-    //           _/ \_   _ Counter
-    //     _   _/     \_/
-    // ___/ \_/
+    //            .-.
+    //          .-' '-. .- Counter
+    //    .-. .-'     '-'
+    // ---' '-'
     // ! ! = ! = = = ! ! = Signal
 
     if (signal == state % 2)
@@ -96,8 +96,7 @@ static void debounce(uint key, bool signal)
         state -= 2;
 
     // When the signal has fully saturated the counter,
-    // we assume that the switch has flipped its state.
-    // Thus we invert the state bit and reset the counter.
+    // invert the state bit and reset the counter.
 
     if (state >= MATRIX_DEBOUNCE_TICKS * 2) {
         report(key, signal);
