@@ -1,6 +1,9 @@
 Development
 -----------
 
+firmware 1.0.2
+- Use PID 1209:5E7C as registered on pid.codes
+
 firmware 1.0.1
 - Add kBOOT keycode to trigger bootloader mode
 - Remove cRWND and cFFWD from default layout

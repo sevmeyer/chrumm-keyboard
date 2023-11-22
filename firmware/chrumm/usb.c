@@ -5,14 +5,12 @@
 #include <pico/unique_id.h>
 
 
-// TinyUSB default ID
-#define USB_VID  0xCAFE
-#define USB_PID (0x4000 |\
-    CFG_TUD_CDC    << 0 |\
-    CFG_TUD_MSC    << 1 |\
-    CFG_TUD_HID    << 2 |\
-    CFG_TUD_MIDI   << 3 |\
-    CFG_TUD_VENDOR << 4 )
+// This ID combination is registered on <https://pid.codes>
+// for the Chrumm keyboard. Do not use it for other firmware.
+// Otherwise, you could mess up the host's driver selection.
+
+#define USB_VID  0x1209
+#define USB_PID  0x5E7C
 
 
 // Device Descriptor
