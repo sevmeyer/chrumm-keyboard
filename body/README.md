@@ -11,10 +11,6 @@ To generate the default STL files:
 
     python3 -m chrumm chrumm.json
 
-To speed up the triangulation during development:
-
-    python3 -m chrumm chrumm.json draft.json
-
 
 Parameters
 ----------
