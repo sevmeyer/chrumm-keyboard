@@ -54,7 +54,7 @@ def cornerArc2D(radius, a, b, c):
 
 
 def uprightHole2D(radius):
-    """Return hole shape intended for upright FFF 3D printing."""
+    """Return hole sketch intended for upright FFF 3D printing."""
     #   _____  <- Clean top bridge
     #  /     \  <- Straight tangent
     # :   +   :  <- Circular bottom

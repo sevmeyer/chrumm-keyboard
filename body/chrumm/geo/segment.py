@@ -26,7 +26,7 @@ class Segment:
         a = self.a
         b = self.b
 
-        # OPTIMIZED: Avoid Vector init, inline 2D calculations
+        # OPTIMIZED: Inline calculations to avoid function overhead
         numer = (vector.x - a.x)*(b.x - a.x) + (vector.y - a.y)*(b.y - a.y)
         denom = (b.x - a.x)**2 + (b.y - a.y)**2
         u = max(0, min(numer / denom, 1)) if denom != 0 else 0
@@ -48,7 +48,7 @@ class Segment:
         c = other.a
         d = other.b
 
-        # OPTIMIZED: Avoid Vector init, inline 2D calculations
+        # OPTIMIZED: Inline calculations to avoid function overhead
         denom = (d.y - c.y)*(b.x - a.x) - (d.x - c.x)*(b.y - a.y)
         if not isZero(denom):
             abPos = ((d.x - c.x)*(a.y - c.y) - (d.y - c.y)*(a.x - c.x)) / denom

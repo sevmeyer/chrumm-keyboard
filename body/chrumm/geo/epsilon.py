@@ -4,15 +4,15 @@
 #
 # Considerations:
 # - The base unit is 1mm.
-# - The maximum expected scale is 1m (1e+3).
-# - The minimum expected scale is 1um (1e-3).
+# - The maximum expected workspace scale is 1m (1e+3).
+# - The minimum expected parameter scale is 1um (1e-3).
 # - STL stores 32bit floats with a machine epsilon of ~1e-7.
 #   Points that are considered separate during construction
 #   should not collapse to identical coordinates in STL.
 # - Geometric comparisons should be consistent across the
-#   working space. Whether two points are considered separate
+#   workspace. Whether two points are considered separate
 #   should not depend on their proximity to the origin.
-#   Therefore, a relative comparison is problematic:
+#   Therefore, relative tolerances are problematic:
 #     math.isclose(100.0000001, 100.0000002) -> False
 #     math.isclose(101.0000001, 101.0000002) -> True
 #
