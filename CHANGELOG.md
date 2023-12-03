@@ -1,6 +1,10 @@
 Development
 -----------
 
+body 1.0.1
+- Revise Face triangulation for better performance
+- Remove obsolete draft.json
+
 firmware 1.0.2
 - Use PID 1209:5E7C as registered on pid.codes
 

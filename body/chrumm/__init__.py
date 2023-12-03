@@ -8,7 +8,7 @@ Copyright 2023 Severin Meyer
 Licensed under CERN-OHL-W v2 or later
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 from .make import make
 
