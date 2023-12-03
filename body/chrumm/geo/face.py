@@ -15,8 +15,8 @@ class Face:
             No duplicate points
             No intersections
             No nested holes
-            Points are reasonably coplanar
             Opposite point order for edge and holes
+            Reasonably coplanar points
         Args:
             edge (list[Vector])
             holes (list[list[Vector]])
@@ -30,41 +30,49 @@ class Face:
         Returns:
             list[Triangle]
         """
-        # Triangulation by Ear Clipping - David Eberly
-        # https://www.geometrictools.com/Documentation/TriangulationByEarClipping.pdf
-        points = list(self.edge)
-        polyIndexes = list(range(len(points)))
+        realPoints = list(self.edge)
+        polyIndexes = list(range(len(realPoints)))
         holeIndexes = []
 
         for hole in self.holes:
             if hole:
-                holeIndexes.append(list(range(len(points), len(hole) + len(points))))
-                points.extend(hole)
+                holeStart = len(realPoints)
+                holeEnd = holeStart + len(hole)
+                holeIndexes.append(list(range(holeStart, holeEnd)))
+                realPoints.extend(hole)
 
-        normal = Vector.fromSurfaceNormal(self.edge)
-        uprightMatrix = Matrix.fromAlignment(normal, Vector(0, 0, 1))
-        uprightPoints = [p.transformed(uprightMatrix).xy for p in points]
+        surfaceNormal = Vector.fromSurfaceNormal(self.edge)
+        uprightMatrix = Matrix.fromAlignment(surfaceNormal, Vector(0, 0, 1))
+        uprightPoints = [p.transformed(uprightMatrix).xy for p in realPoints]
 
-        polyIndexes = Face._mergeHoles(uprightPoints, polyIndexes, holeIndexes)
+        Face._mergeHoles(uprightPoints, polyIndexes, holeIndexes)
         triangles = Face._cutEars(uprightPoints, polyIndexes)
-        triangles = Face._flipTriangles(uprightPoints, triangles)
+        Face._flipTriangles(uprightPoints, triangles)
 
-        return [Triangle(points[i], points[j], points[k]) for i, j, k in triangles]
+        return [Triangle(
+            realPoints[i],
+            realPoints[j],
+            realPoints[k]) for i, j, k in triangles]
 
     @staticmethod
     def _mergeHoles(points, polyIndexes, holeIndexes):
-        orderedHoles = []
+        # Triangulation by Ear Clipping - David Eberly
+        # https://www.geometrictools.com/Documentation/TriangulationByEarClipping.pdf
 
         # Reorder each hole to start at the rightmost point
+        orderedHoles = []
         for hole in holeIndexes:
             start = max(range(len(hole)), key=lambda i: points[hole[i]])
             orderedHoles.append(hole[start:] + hole[:start])
 
+        # Sort holes from right to left
+        orderedHoles.sort(key=lambda h: points[h[0]], reverse=True)
+
         # Connect each hole to a visible point on the right
-        for hole in sorted(orderedHoles, key=lambda h: points[h[0]], reverse=True):
+        for hole in orderedHoles:
             vis = None
 
-            # Construct rightward search triangle abc
+            # Determine rightward search triangle abc
             #             .c
             # _____     .'/
             #      |  .' /
@@ -73,13 +81,13 @@ class Face:
             #         /
             #  polygon
 
-            a = points[hole[0]]  # Rightward ray origin
+            a = points[hole[0]]   # Rightward ray origin
             b = Vector(math.inf)  # Ray intersection with polygon
             c = Vector(math.inf)  # Rightmost end of intersected segment
             for i in range(len(polyIndexes)):
-                j = (i+1) % len(polyIndexes)
-                p = points[polyIndexes[i]]
-                q = points[polyIndexes[j]]
+                j = (i + 1) % len(polyIndexes)
+                p = points[polyIndexes[i]]  # Polygon segment start
+                q = points[polyIndexes[j]]  # Polygon segment end
                 if p.y == a.y == q.y:
                     if a.x < p.x and a.x < q.x:
                         if p.x < q.x and p.x < b.x:
@@ -97,8 +105,8 @@ class Face:
 
             # Check for better point inside search triangle
             if b != c:
+                # Ensure triangle is counterclockwise
                 if c.y < b.y:
-                    # Ensure triangle is counter-clockwise
                     b, c = c, b
 
                 aDir = (b - a).normalized2D()
@@ -108,13 +116,13 @@ class Face:
 
                 for i in range(len(polyIndexes)):
                     p = points[polyIndexes[i]]
-                    isInTriangle = (
+                    isInside = (
                         aDir.x*(a.y - p.y) - aDir.y*(a.x - p.x) < -1e-6 and
                         bDir.x*(b.y - p.y) - bDir.y*(b.x - p.x) < -1e-6 and
                         cDir.x*(c.y - p.y) - cDir.y*(c.x - p.x) < -1e-6)
-                    if isInTriangle:
-                        o = points[polyIndexes[(i-1) % len(polyIndexes)]]
-                        q = points[polyIndexes[(i+1) % len(polyIndexes)]]
+                    if isInside:
+                        o = points[polyIndexes[(i - 1) % len(polyIndexes)]]
+                        q = points[polyIndexes[(i + 1) % len(polyIndexes)]]
                         isReflex = (p.x - o.x)*(q.y - p.y) - (q.x - p.x)*(p.y - o.y) < 0
                         if isReflex:
                             dist = (p.x - a.x)*(p.x - a.x) + (p.y - a.y)*(p.y - a.y)
@@ -122,140 +130,123 @@ class Face:
                                 minDist = dist
                                 vis = i
 
-            polyIndexes = polyIndexes[:vis+1] + hole + [hole[0]] + polyIndexes[vis:]
-
-        return polyIndexes
+            # Merge hole (vis -> hole -> hole[0] -> vis)
+            polyIndexes.insert(vis, polyIndexes[vis])
+            polyIndexes.insert(vis+1, hole[0])
+            polyIndexes[vis+1:vis+1] = hole
 
     @staticmethod
-    def _cutEars(points, polyIndexes):  # TODO: Optimize
+    def _cutEars(points, polyIndexes):
         remaining = list(polyIndexes)
-        triangles = []
+        cache = [None] * len(remaining)
+        ears = []
 
         for _ in range(len(remaining) - 2):
             for i in range(len(remaining)):
-                ear = (
-                    remaining[i-1],
-                    remaining[i],
-                    remaining[(i+1) % len(remaining)])
+                # Cache reusable calculations
+                if cache[i] is None:
+                    ear = [
+                        remaining[i - 1],
+                        remaining[i],
+                        remaining[(i + 1) % len(remaining)]]
 
-                a = points[ear[0]]
-                b = points[ear[1]]
-                c = points[ear[2]]
+                    a = points[ear[0]]
+                    b = points[ear[1]]
+                    c = points[ear[2]]
 
-                aDir = (b - a).normalized2D()
-                bDir = (c - b).normalized2D()
-                cDir = (a - c).normalized2D()
+                    aDir = (b - a).normalized2D()
+                    bDir = (c - b).normalized2D()
+                    cDir = (a - c).normalized2D()
 
-                earHeight = cDir.y*(c.x - b.x) - cDir.x*(c.y - b.y)
-                if earHeight < 1e-6:
+                    aDot = aDir.y*a.x - aDir.x*a.y + 1e-6
+                    bDot = bDir.y*b.x - bDir.x*b.y + 1e-6
+                    cDot = cDir.y*c.x - cDir.x*c.y + 1e-6
+
+                    earHeight = cDir.x*b.y - cDir.y*b.x + cDot
+                    cache[i] = ear, aDir, bDir, cDir, aDot, bDot, cDot, earHeight
+                else:
+                    ear, aDir, bDir, cDir, aDot, bDot, cDot, earHeight = cache[i]
+
+                if earHeight < 0:
                     continue
 
-                isEmpty = True
+                # Check if any point is inside ear
+                isInside = False
                 for j in remaining:
                     if j in ear:
                         continue
                     p = points[j]
-                    isInEar = (
-                        aDir.x*(a.y - p.y) - aDir.y*(a.x - p.x) < 1e-6 and
-                        bDir.x*(b.y - p.y) - bDir.y*(b.x - p.x) < 1e-6 and
-                        cDir.x*(c.y - p.y) - cDir.y*(c.x - p.x) < 1e-6)
-                    if isInEar:
-                        isEmpty = False
+                    isInside = (
+                        cDir.y*p.x - cDir.x*p.y < cDot and
+                        bDir.y*p.x - bDir.x*p.y < bDot and
+                        aDir.y*p.x - aDir.x*p.y < aDot)
+                    if isInside:
                         break
 
-                if isEmpty:
-                    triangles.append(ear)
+                # Cut empty ear
+                if not isInside:
+                    ears.append(ear)
                     del remaining[i]
+                    del cache[i]
+                    cache[i - 1] = None
+                    cache[i % len(cache)] = None
                     break
 
-        return triangles
+        return ears
 
     @staticmethod
-    def _flipTriangles(points, triangles):  # TODO: Merge with _cutEars
-        class LinkedTriangle:  # TODO: Independent class
-            """Triangle with references to its neighbors in counterclockwise order."""
+    def _flipTriangles(points, triangles):
+        # Map counterclockwise edges to triangles for a fast lookup
+        lookup = {(t[i-1], t[i]): t for t in triangles for i in (0, 1, 2)}
+        remaining = set(lookup.keys())
 
-            __slots__ = "indexes", "neighbors", "angles"
+        while remaining:
+            a, b = remaining.pop()
 
-            def __init__(self, indexes):
-                self.indexes = indexes
-                self.neighbors = [None, None, None]
-                self.cacheAngles()
+            # c<---- b
+            #  \ 0 // \
+            #   \ // 1 \
+            #    a ---->d
 
-            def cacheAngles(self):
-                a = points[self.indexes[0]]
-                b = points[self.indexes[1]]
-                c = points[self.indexes[2]]
+            try:
+                tri0 = lookup[(a, b)]
+                tri1 = lookup[(b, a)]
+            except KeyError:
+                continue
 
-                abAngle = math.atan2(b.y - a.y, b.x - a.x)
-                bcAngle = math.atan2(c.y - b.y, c.x - b.x)
-                caAngle = math.atan2(a.y - c.y, a.x - c.x)
+            c = tri0[tri0.index(a) - 1]
+            d = tri1[tri1.index(b) - 1]
 
-                self.angles = [
-                    (caAngle + math.pi - abAngle) % math.tau,
-                    (abAngle + math.pi - bcAngle) % math.tau,
-                    (bcAngle + math.pi - caAngle) % math.tau]
+            da = points[a] - points[d]
+            db = points[b] - points[d]
+            dc = points[c] - points[d]
 
-            def opposite(self, i, j):
-                if self.indexes[1] == i and self.indexes[0] == j:
-                    return 2
-                if self.indexes[2] == i and self.indexes[1] == j:
-                    return 0
-                if self.indexes[0] == i and self.indexes[2] == j:
-                    return 1
-                return None
+            # https://en.wikipedia.org/wiki/Delaunay_triangulation
+            isDelaunay = (
+                (da.x*da.x + da.y*da.y) * (db.x*dc.y-dc.x*db.y) -
+                (db.x*db.x + db.y*db.y) * (da.x*dc.y-dc.x*da.y) +
+                (dc.x*dc.x + dc.y*dc.y) * (da.x*db.y-db.x*da.y)) < 1e-6
 
-            def link(self, other):
-                for n in (0, 1, 2):
-                    o = other.opposite(self.indexes[n], self.indexes[n-2])
-                    if o is not None:
-                        self.neighbors[n] = other
-                        other.neighbors[o-2] = self
-                        return
+            if isDelaunay:
+                continue
 
-            def flip(self):
-                for n, neig in enumerate(self.neighbors):
-                    if neig is None:
-                        continue
+            # Flip triangles in-place
+            tri0[tri0.index(b)] = d
+            tri1[tri1.index(a)] = c
 
-                    o = neig.opposite(self.indexes[n], self.indexes[n-2])
+            # Remap edges
+            del lookup[(a, b)]
+            del lookup[(b, a)]
 
-                    # https://en.wikipedia.org/wiki/Delaunay_triangulation
-                    if self.angles[n-1] + neig.angles[o] < math.pi + 1e-6:
-                        continue
+            lookup[(d, c)] = tri0
+            lookup[(c, a)] = tri0
+            lookup[(a, d)] = tri0
+            lookup[(c, d)] = tri1
+            lookup[(d, b)] = tri1
+            lookup[(b, c)] = tri1
 
-                    tempIndexes = [self.indexes[n-1], neig.indexes[o], self.indexes[n-2]]
-                    self.indexes = [neig.indexes[o], self.indexes[n-1], neig.indexes[o-1]]
-                    neig.indexes = tempIndexes
-
-                    tempNeighbors = [self, neig.neighbors[o], self.neighbors[n-2]]
-                    self.neighbors = [neig, self.neighbors[n-1], neig.neighbors[o-1]]
-                    neig.neighbors = tempNeighbors
-
-                    if self.neighbors[2]:
-                        self.neighbors[2].link(self)
-                    if neig.neighbors[2]:
-                        neig.neighbors[2].link(neig)
-
-                    self.cacheAngles()
-                    neig.cacheAngles()
-                    return True
-
-                return False
-
-        # Populate
-        links = []
-        for indexes in triangles:
-            link = LinkedTriangle(indexes)
-            for other in links:
-                link.link(other)
-            links.append(link)
-
-        # Flip
-        isChanged = True
-        while isChanged:
-            isChanged = False
-            for link in links:
-                isChanged |= link.flip()
-
-        return [link.indexes for link in links]
+            # Revisit neighboring edges
+            remaining.add((c, a))
+            remaining.add((a, d))
+            remaining.add((d, b))
+            remaining.add((b, c))

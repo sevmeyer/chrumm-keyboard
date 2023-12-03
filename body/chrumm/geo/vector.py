@@ -135,7 +135,9 @@ class Vector:
         return Vector(-self.y, self.x)
 
     def normalized2D(self):
-        return self.xy / self.magnitude2D()
+        # OPTIMIZED: Inline calculations to avoid function overhead
+        magnitude = (self.x*self.x + self.y*self.y)**0.5
+        return Vector(self.x/magnitude, self.y/magnitude)
 
     def magnitude2D(self):
         return (self.x*self.x + self.y*self.y)**0.5
