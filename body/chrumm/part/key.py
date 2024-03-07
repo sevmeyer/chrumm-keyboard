@@ -26,6 +26,12 @@ class KeyFactory:
         outerMargin = cfg.switch.outerMargin
         entryChamfer = cfg.switch.entryChamfer
 
+        hasClip = cfg.switch.clipNotch and cfg.switch.clipNotch.height < holeH
+        isSideways = hasClip and getattr(cfg.switch.clipNotch, "isSideways", False)
+
+        if isSideways:
+            holeW, holeD = holeD, holeW
+
         holeL = -holeW/2
         holeR = holeW/2
         holeF = -holeD/2
@@ -68,7 +74,7 @@ class KeyFactory:
 
         # Back clip notch
 
-        if cfg.switch.clipNotch and cfg.switch.clipNotch.height < holeH:
+        if hasClip:
             clipW = cfg.switch.clipNotch.width
             clipD = cfg.switch.clipNotch.depth
             clipH = cfg.switch.clipNotch.height
@@ -109,6 +115,14 @@ class KeyFactory:
         self.roofHoleO = entryEdge
         self.roofHoleI = exitEdge
         self.triangles.extend([t.mirroredX().mirroredY() for t in self.triangles])
+
+        if isSideways:
+            rotate = Matrix().rotatedZ(math.tau/4)
+            self.boundsI = self.boundsI.transformed(rotate)
+            self.boundsO = self.boundsO.transformed(rotate)
+            self.roofHoleI = self.roofHoleI.transformed(rotate)
+            self.roofHoleO = self.roofHoleO.transformed(rotate)
+            self.triangles = [t.transformed(rotate) for t in self.triangles]
 
     def make(self, units=1):
         return Key(self, units)

@@ -19,32 +19,48 @@ class SupportFactory:
         holeD = cfg.switch.depth
         holeH = cfg.body.roofThickness
 
-        # Support names use print orientation
+        # Support parameters in print orientation
 
         baseW = cfg.support.baseWidth
         baseD = cfg.support.baseDepth
-        topD = cfg.support.topDepth
         sideGap = cfg.support.sideGap
         baseGap = cfg.support.baseGap
         topGap = cfg.support.topGap
+        topD = cfg.support.topDepth
+        topW = holeD - 2*sideGap
 
-        # Construct in standard orientation
+        legacyBaseInset = 1 - sideGap/(holeH - baseD)
+        legacyTopInset = 1 - sideGap/(holeH - topD)
 
-        boundL = -holeW/2 + baseGap
-        boundR = holeW/2 - topGap
-        boundB = holeD/2 - sideGap
-        boundG = -holeH + sideGap
+        relBasePos = getattr(cfg.support, "relBasePosition", 0)
+        relBaseInset = getattr(cfg.support, "relBaseInset", legacyBaseInset)
+        relTopInset = getattr(cfg.support, "relTopInset", legacyTopInset)
 
-        centerL = Vector(boundL, boundB - baseD/2, boundG + baseD/2)
-        centerR = Vector(boundR, boundB - topD/2, boundG + topD/2)
-        insetL = Vector(0, 2*boundB - baseW, 0)
+        # Construction in standard orientation
+        #
+        #     holeW
+        # .-----------.
+        # | .-------. |
+        # | |support| | holeD
+        # |  '..    | |
+        # |     ''..| | y
+        # | base  top | zx
+
+        baseInset = baseD/2 + (holeH - baseD)*relBaseInset
+        topInset = topD/2 + (holeH - topD)*relTopInset
+
+        centerL = Vector(-holeW/2 + baseGap, baseW/2 - baseD/2, -baseInset)
+        centerR = Vector(holeW/2 - topGap, topW/2 - topD/2, -topInset)
 
         arc = Edge(Vector(0, p.y, -p.x) for p in arc2D(topD/2, 0, math.pi))
         edgeL = arc.scaled(baseD/topD).translated(centerL)
         edgeR = arc.translated(centerR)
 
-        edgeL.add(edgeL.mirroredY().reversed().translated(insetL))
+        edgeL.add(edgeL.mirroredY().reversed())
         edgeR.add(edgeR.mirroredY().reversed())
+
+        baseMove = Vector(0, (topW - baseW)/2 - (topW - baseW)*relBasePos)
+        edgeL = edgeL.translated(baseMove)
 
         self.triangles.extend(edgeL.meshPairwise(edgeR, True))
         self.triangles.extend(Face(edgeL.reversed()).triangulate())

@@ -1,5 +1,5 @@
 {
-"maker": "chrumm 1.0.1",
+"maker": "chrumm 1.0.2",
 "quality": {
     "maxChordHeight": 0.01,
     "maxChordAngle": 30,
@@ -100,7 +100,8 @@
         "width": 8,
         "depth": 0.9,
         "height": 1.4,
-        "taperAngle": 60 }},
+        "taperAngle": 60,
+        "isSideways": 0 }},
 "encoder": {
     "width": 13.7,
     "depth": 12.8,
@@ -116,6 +117,9 @@
     "sideGap": 0.5,
     "baseGap": 0.2,
     "topGap": 0.2,
+    "relBasePosition": 0,
+    "relBaseInset": 0.64,
+    "relTopInset": 0.83,
     "minOverhangAngle": 30,
     "holeTaperAngle": 45 },
 "bracket": {
