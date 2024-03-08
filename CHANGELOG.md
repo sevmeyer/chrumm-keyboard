@@ -3,10 +3,10 @@ Development
 
 body 1.0.2
 - Add optional parameters for switches with clips on their side
-    switch.clipNotch.isSideways  Left-right instead of front-back
-    support.relBasePosition      Sideways position relative to top
-    support.relBaseInset         From switch hole front to back
-    support.relTopInset          From switch hole front to back
+  * switch.clipNotch.isSideways  (Left-right instead of front-back)
+  * support.relBasePosition      (Sideways position relative to top)
+  * support.relBaseInset         (From switch hole front to back)
+  * support.relTopInset          (From switch hole front to back)
 
 body 1.0.1
 - Revise Face triangulation for better performance
