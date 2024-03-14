@@ -118,6 +118,7 @@ require a ball-point driver, or a short-armed key.
 (**) It might be cheaper to buy strips with
 more conductors and cut them apart as needed.
 
+see the convenient [shopping list](SHOPPING_LIST.md) for details.
 
 Images
 ------

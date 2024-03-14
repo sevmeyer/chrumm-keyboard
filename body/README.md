@@ -81,3 +81,8 @@ are available on the [releases] page.
 
 [PrusaSlicer]: https://www.prusa3d.com/prusaslicer/
 [releases]: https://github.com/sevmeyer/chrumm-keyboard/releases
+
+Assembly
+--------
+
+The assembly is straightforward. See the [assembly guide](ASSEMBLY.md).
