@@ -1,5 +1,5 @@
-Chrumm keyboard firmware
-========================
+Chrumm firmware
+===============
 
 The firmware is written in C for the [Raspberry Pi Pico].
 If you instead prefer a more standard toolkit, check out
@@ -37,7 +37,7 @@ When Num Lock is off, the LED blinks once every 2 seconds.
 Compile
 -------
 
-The default uf2 binary is available on the [releases] page.
+The default UF2 binary is available on the [Releases] page.
 
 To compile a custom version, install the [Pico SDK] and [Arm GNU Toolchain].
 Set the `PICO_SDK_PATH` environment variable to the SDK directory.
@@ -47,7 +47,7 @@ The firmware can then be prepared and compiled with:
     cmake -B build
     cmake --build build
 
-[releases]: https://github.com/sevmeyer/chrumm-keyboard/releases
+[Releases]: https://github.com/sevmeyer/chrumm-keyboard/releases
 [Pico SDK]: https://github.com/raspberrypi/pico-sdk
 [Arm GNU Toolchain]: https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain
 
@@ -60,7 +60,7 @@ the USB cable. It should show up as a USB storage device.
 After the first install, you can keep the keyboard plugged in
 and instead tap Fn+Z three times.
 
-Drag-and-drop the uf2 binary from the build directory onto the device.
+Drag-and-drop the UF2 binary from the build directory onto the device.
 The Pico should automatically restart and run the firmware.
 Alternatively, install [picotool] and use:
 

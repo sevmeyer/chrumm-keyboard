@@ -1,5 +1,5 @@
-Chrumm keyboard STL generator
-=============================
+Chrumm STL generator
+====================
 
 The STL files are generated with the `chrumm` package for Python 3.7+.
 It has no dependencies and does not need to be compiled or installed.
@@ -69,15 +69,3 @@ to `false` in order to omit them from the output:
     pcb.mount
     support
     switch.clipNotch
-
-
-Print
------
-
-I printed the parts on a Prusa Mini, with PLA filament,
-on a smooth PEI sheet. The gcode was generated with
-[PrusaSlicer] 2.6.0. The 3MF files with the exact settings
-are available on the [releases] page.
-
-[PrusaSlicer]: https://www.prusa3d.com/prusaslicer/
-[releases]: https://github.com/sevmeyer/chrumm-keyboard/releases
