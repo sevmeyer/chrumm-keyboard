@@ -14,7 +14,7 @@ Mechanical
 - 14x 3M Bumpon SJ5302, hemispherical, 8mm diameter, 2mm height
 -  2x Artificial leather, ~190x130mm, max 1.2mm thickness
 - Glue for artificial leather on printed filament
-- Keycaps (photo: Akko WOB Building Blocks, MDA profile)
+- Keycaps (in photo: Akko WOB Building Blocks, MDA profile)
 
 (*) Some of the screws are difficult to reach and
 require a ball-point driver, or a short-armed key.
@@ -37,14 +37,12 @@ Electronic
 more conductors and cut them apart as needed.
 
 
-3D printed
+3D-printed
 ----------
 
 -  2x Body half (left, right)
 -  2x Floor half (left, right)
 -  2x Palm rest (left, right)
 -  1x Rotary encoder knob
--  1x Diode bender jig, 7.62mm pitch (=300mil)
-- 12x Diode standoff jig, instead of a [third hand]
-
-[third hand]: https://en.wikipedia.org/wiki/Helping_hand_(tool)
+-  1x Diode bender jig, 7.62mm pitch (300mil)
+- 12x Diode standoff jig

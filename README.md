@@ -20,7 +20,7 @@ Files
 -----
 
 - [Releases] - Download page for STL, 3MF, GBR, UF2 files
-- [BUILD.md](BUILD.md) - Build instructions
+- [BUILD.md](BUILD.md) - Build advice
 - [MATERIALS.md](MATERIALS.md) - Bill Of Materials
 - [pcb/README.md](pcb/README.md) - PCB production details
 - [body/README.md](body/README.md) - Body generator parameters

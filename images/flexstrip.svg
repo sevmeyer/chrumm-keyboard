@@ -6,15 +6,56 @@
 		</marker>
 	</defs>
 	<rect width="100%" height="100%" style="fill:#fff"/>
-	<g style="fill:#aaa">
+	<g style="fill:#999">
 		<path d="m288 60-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344z"/>
 		<path d="m288 324-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344zm0 20-20 4h-36v4h36l20 4h344l20-4h36v-4h-36l-20-4h-344z"/>
 		<path d="m88 528-20 4h-36v4h36l20 4h544l20-4h36v-4h-36l-20-4h-544zm0 20-20 4h-36v4h36l20 4h544l20-4h36v-4h-36l-20-4h-544zm0 20-20 4h-36v4h36l20 4h544l20-4h36v-4h-36l-20-4h-544z"/>
 	</g>
-	<g style="fill:#ddd;opacity:.8">
+	<g style="fill:#ddd;opacity:.9">
 		<rect x="256" y="56" width="408" height="160"/>
 		<rect x="256" y="320" width="408" height="100"/>
 		<rect x="56" y="524" width="608" height="60"/>
+	</g>
+	<g style="fill:none;stroke-width:4;stroke:#999">
+		<path d="m940 92v48c0 9-7 15-16 16s-167 24-176 24-16-7-16-16 7-16 16-16 71 8 80 8 16-7 16-16v-48"/>
+		<path d="m1028 328v68c0 9-7 16-16 16h-264c-9 0-16-7-16-16v-68"/>
+		<path d="m1236 484v72c0 9-7 16-16 16s-463-36-472-36-16 7-16 16v56"/>
+	</g>
+	<g style="fill:none;opacity:.85;stroke-width:10;stroke:#ccc">
+		<path d="m940 116v24c0 9-7 15-16 16s-167 24-176 24-16-7-16-16 7-16 16-16 71 8 80 8 16-7 16-16v-24"/>
+		<path d="m1028 352v44c0 9-7 16-16 16h-264c-9 0-16-7-16-16v-44"/>
+		<path d="m1236 508v48c0 9-7 16-16 16s-463-36-472-36-16 7-16 16v32"/>
+	</g>
+	<g style="fill:none;marker-end:url(#m);marker-start:url(#m);stroke-dasharray:12,8;stroke-width:2;stroke:#333">
+		<path d="m288 56 16 160"/>
+		<path d="m424 56-16 160"/>
+		<path d="m616 56 16 160"/>
+		<path d="m328 320-24 100"/>
+		<path d="m592 320 24 100"/>
+		<path d="m104 524v60"/>
+		<path d="m576 524 48 60"/>
+	</g>
+	<g style="fill:none;stroke-width:2;stroke:#333">
+		<path d="m622 56h36m-228 0h180m-316 0h124m-156 0h20"/>
+		<path d="m638 216h20m-244 0h212m-316 0h92m-140 0h36"/>
+		<path d="m598 320h60m-324 0h252m-324 0h60"/>
+		<path d="m622 420h36m-348 0h300m-348 0h36"/>
+		<path d="m582 524h76m-548 0h460m-508 0h36"/>
+		<path d="m630 584h28m-548 0h508m-556 0h36"/>
+	</g>
+	<g style="fill:#333">
+		<circle cx="256" cy="56" r="4"/>
+		<circle cx="664" cy="56" r="4"/>
+		<circle cx="256" cy="216" r="4"/>
+		<circle cx="664" cy="216" r="4"/>
+		<circle cx="256" cy="320" r="4"/>
+		<circle cx="664" cy="320" r="4"/>
+		<circle cx="256" cy="420" r="4"/>
+		<circle cx="664" cy="420" r="4"/>
+		<circle cx="56" cy="524" r="4"/>
+		<circle cx="664" cy="524" r="4"/>
+		<circle cx="56" cy="584" r="4"/>
+		<circle cx="664" cy="584" r="4"/>
 	</g>
 	<g style="fill:#333">
 		<text x="256" y="44">0</text>
@@ -37,37 +78,8 @@
 		<text x="664" y="512">76</text>
 		<text x="104" y="612">6</text>
 		<text x="632" y="612">71</text>
-	</g>
-	<g style="fill:#999">
 		<text x="520" y="154">FSN-22A-8</text>
 		<text x="460" y="378">FSN-22A-5</text>
 		<text x="360" y="562">FSN-23A-3</text>
-	</g>
-	<g style="fill:none;marker-end:url(#m);marker-start:url(#m);stroke-dasharray:12,8;stroke-width:2;stroke:#333">
-		<path d="m288 56 16 160"/>
-		<path d="m424 56-16 160"/>
-		<path d="m616 56 16 160"/>
-		<path d="m328 320-24 100"/>
-		<path d="m592 320 24 100"/>
-		<path d="m104 524v60"/>
-		<path d="m576 524 48 60"/>
-	</g>
-	<g style="fill:#333">
-		<circle cx="256" cy="56" r="4"/>
-		<circle cx="664" cy="56" r="4"/>
-		<circle cx="256" cy="320" r="4"/>
-		<circle cx="664" cy="320" r="4"/>
-		<circle cx="56" cy="524" r="4"/>
-		<circle cx="664" cy="524" r="4"/>
-	</g>
-	<g style="fill:none;opacity:.8;stroke-width:10;stroke:#ccc">
-		<path d="m940 116v24c0 9-7 15-16 16s-167 24-176 24-16-7-16-16 7-16 16-16 71 8 80 8 16-7 16-16v-24"/>
-		<path d="m1028 352v44c0 9-7 16-16 16h-264c-9 0-16-7-16-16v-44"/>
-		<path d="m1236 508v48c0 9-7 16-16 16s-463-36-472-36-16 7-16 16v32"/>
-	</g>
-	<g style="fill:none;stroke-width:4;stroke:#aaa">
-		<path d="m940 92v48c0 9-7 15-16 16s-167 24-176 24-16-7-16-16 7-16 16-16 71 8 80 8 16-7 16-16v-48"/>
-		<path d="m1028 328v68c0 9-7 16-16 16h-264c-9 0-16-7-16-16v-68"/>
-		<path d="m1236 484v72c0 9-7 16-16 16s-463-36-472-36-16 7-16 16v56"/>
 	</g>
 </svg>
